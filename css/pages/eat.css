@@ -1,0 +1,35 @@
+/* ============================================
+   Eat (café holding page): page-specific styles
+   Loaded after base.css and tokens.css.
+   ============================================ */
+
+.hours-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 32rem;
+}
+.hours-list li{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.95rem 0;
+  border-bottom: 1px solid rgba(50,45,38,0.16);
+}
+.hours-list li:last-child{ border-bottom: none; }
+.hours-day{
+  font-size: 1rem;
+  font-weight: 500;
+}
+.hours-time{
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  opacity: 0.75;
+  text-align: right;
+}
+
+@media (max-width: 620px){
+  .hours-list li{ flex-direction: column; gap: 0.3rem; }
+  .hours-time{ text-align: left; }
+}

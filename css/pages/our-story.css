@@ -1,0 +1,88 @@
+/* ============================================
+   OUR STORY (static, no animation yet)
+   Reference is 370 wide; 1cqw = 1% of the board width.
+   ============================================ */
+.os{
+  --os-ink:#1f1913; --os-body:#2a221a; --os-rule:rgba(92,70,48,.45);
+  position:relative; overflow:hidden; color:var(--os-ink);
+  padding:clamp(4.5rem,20.27cqw,7rem) 0 clamp(3rem,6vw,6rem);
+  font-family:var(--nav-serif,"Newsreader",Georgia,serif);
+}
+.os__defs{ position:absolute; width:0; height:0; }
+.os__board{ container-type:inline-size; width:min(100%,120rem); margin-inline:auto; }
+.os__head,.os__block{ position:relative; margin-inline:4.86cqw; }
+
+/* ---- header (centred) ---- */
+.os__head{ display:flex; flex-direction:column; align-items:center; text-align:center; padding-bottom:1cqw; }
+.os__head > *{ margin:0; }
+.os__eyebrow{ font-size:clamp(1.5rem,.9cqw,.9rem); letter-spacing:.17em; text-transform:uppercase; line-height:1; }
+.os__rule{ width:4.86cqw; border-top:1px solid var(--os-ink); margin:1.2cqw 0 3cqw; }
+.os__title{ font-family:var(--nav-serif,"Newsreader",Georgia,serif); font-weight:400; font-size:9cqw; line-height:10.4cqw; letter-spacing:-.07em; word-spacing:.06em; white-space:nowrap; font-optical-sizing:none; font-variation-settings:"opsz" 53; }
+.os__title span{ display:inline; }
+.os__intro{ width:90cqw; margin-top:4.5cqw; font-size:clamp(1rem,2.15cqw,2.3rem); line-height:1.7; color:var(--os-body); letter-spacing:-.005em; text-wrap:balance; }
+.os__ln{ display:inline; }
+
+/* ---- numbered blocks ---- */
+.os__block{ display:grid; align-items:start; margin-top:4.86cqw; }
+.os__b1,.os__b3{ grid-template-columns:13.78cqw 42.16cqw 1fr; }
+.os__b2{ grid-template-columns:47.84cqw 14.32cqw 1fr; margin-top:7.03cqw; }
+.os__label{ position:relative; padding-left:1.89cqw; min-height:11.89cqw; border-left:1px solid var(--os-ink); }
+.os__num{ display:block; font-size:clamp(.9rem,1.7cqw,1.6rem); line-height:1; margin-top:.1cqw; }
+.os__dash{ display:block; width:2.70cqw; border-top:1px solid var(--os-ink); margin:1.89cqw 0 2.70cqw; }
+.os__name{ display:block; font-size:clamp(.66rem,.95cqw,1.05rem); line-height:1.65; letter-spacing:.2em; text-transform:uppercase; }
+.os__text p{ margin:0 0 2.16cqw; font-size:clamp(1rem,1.65cqw,1.75rem); line-height:1.7; color:var(--os-body); }
+.os__b1 .os__text{ grid-column:2; }
+.os__b2 .os__label{ grid-column:2; grid-row:1; }
+.os__b2 .os__text{ grid-column:3; grid-row:1; max-width:29.73cqw; }
+.os__b2 .os__art{ position:absolute; left:0.54cqw; top:-2.16cqw; width:44.59cqw; aspect-ratio:175/112; }
+.os__b3 .os__text{ grid-column:2; }
+
+.os__art{ position:relative; container-type:inline-size; }
+.os__art svg{ display:block; width:100%; height:auto; overflow:visible; }
+.os__art--plan{ grid-column:3; grid-row:1; width:25.41cqw; justify-self:end; margin:0.54cqw 0 0 0; }
+.os__art--plant{ position:absolute; right:0; top:-3.78cqw; width:27.03cqw; aspect-ratio:110/90; }
+.os__scraps{ position:absolute !important; left:-1.08cqw; top:2.16cqw; width:7.03cqw !important; height:auto; }
+.os__art--house .os__scraps{ left:-2%; top:2%; width:19% !important; }
+.os__dot{ position:absolute; right:-2%; top:18%; width:3.78cqw; aspect-ratio:1; border-radius:50%; background:#c4913f; opacity:.85; }
+
+/* ---- handwritten notes (live text) ---- */
+.os__note{ position:absolute; margin:0; font-family:"Reenie Beanie","Bradley Hand",cursive; color:#5a5046; line-height:.95; white-space:nowrap; transform:translate(-50%,-50%) rotate(var(--r)); text-align:left; font-size:clamp(1rem,5cqw,2.4rem); }
+.os__note--ny{ left:90%; top:12%; --r:-22deg; font-size:clamp(1.2rem,7.2cqw,2.6rem); }
+.os__note--layout{ left:88%; top:106%; --r:-18deg; font-size:clamp(.95rem,6cqw,1.6rem); }
+.os__note--home{ left:79%; top:92%; --r:-14deg; font-size:clamp(1.1rem,4.6cqw,2rem); }
+.os__note--garden{ left:86%; top:90%; --r:-14deg; font-size:clamp(1.1rem,6.5cqw,2rem); }
+
+/* ---- strokes ---- */
+.os svg path{ fill:none; stroke-linecap:round; stroke-linejoin:round; }
+.os .ink{ stroke:#37322a; stroke-width:.5; } .os .ink2{ stroke:#51493e; stroke-width:.5; }
+.os .fine{ stroke:#4a443a; stroke-width:.32; opacity:.85; } .os .hatch{ stroke:#4a443a; stroke-width:.25; opacity:.7; }
+.os .guide{ stroke:#8a7a68; stroke-width:.3; opacity:.8; }
+.os .solid{ fill:var(--paper,#F2EAD9); stroke:none; }
+.os .circle{ stroke:#6b5f50; stroke-width:.4; opacity:.7; }
+.os .arrow{ stroke:#4c443a; stroke-width:.6; }
+.os .beige{ fill:#d3c1a3; stroke:none; } .os .terra{ fill:#b5694a; stroke:none; } .os .terra2{ fill:#c07b58; stroke:none; opacity:.8; }
+.os .pale{ fill:#e6d9c0; stroke:none; } .os .ochre-scrap{ fill:#cc9f60; stroke:none; } .os .ochre-scrap2{ fill:#d6af72; stroke:none; }
+
+/* ---- tablet / phone: one column ---- */
+@media (max-width:860px){
+  .os{ padding:calc(clamp(4rem,6.25vw,6.4rem) + 1.4rem) 1.4rem 3rem; }
+  .os__board{ container-type:normal; max-width:34rem; }
+  .os__head,.os__block{ margin-inline:0; }
+  .os__head{ padding-bottom:0; }
+  .os__eyebrow{ order:1; font-size:.76rem; }
+  .os__rule{ order:2; width:2.6rem; margin:.7rem 0 1.2rem; }
+  .os__title span{ display:block; }
+  .os__title{ order:3; font-size:clamp(2.6rem,13.4vw,4.4rem); line-height:.93; margin:0 0 1.1rem -.04em; }
+  .os__intro{ order:4; width:auto; margin:0; font-size:1.05rem; line-height:1.55; }
+  .os__ln{ display:inline; white-space:normal; }
+  .os__block{ display:flex; flex-direction:column; margin-top:2.6rem; }
+  .os__label{ min-height:0; padding:.2rem 0 .2rem 1rem; margin-bottom:1.2rem; align-self:flex-start; }
+  .os__dash{ margin:.55rem 0 .7rem; width:1.2rem; }
+  .os__name{ font-size:.66rem; }
+  .os__text p{ font-size:1.02rem; margin-bottom:1.1rem; }
+  .os__b2 .os__label{ order:1; } .os__b2 .os__text{ order:2; max-width:none; } .os__b2 .os__art{ order:3; }
+  .os__art,.os__b2 .os__art,.os__art--plant,.os__art--plan{ position:relative !important; left:auto !important; right:auto !important; top:auto !important; width:min(100%,24rem) !important; margin:1.4rem auto 2.4rem !important; justify-self:auto; }
+  .os__art--plan{ width:min(80%,19rem) !important; }
+  .os__art--plant{ width:min(72%,18rem) !important; margin-left:auto !important; }
+  .os__note{ font-size:clamp(1.15rem,5.2vw,1.6rem) !important; }
+}

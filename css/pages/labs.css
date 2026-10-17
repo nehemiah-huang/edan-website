@@ -1,0 +1,6 @@
+/* ============================================
+   Labs: page-specific styles
+   (The lab rows themselves are still styled in base.css for now.)
+   ============================================ */
+
+.labs-method .section-head p + p{ margin-top: 1.2rem; }

@@ -1,0 +1,20 @@
+/* ============================================
+   Stay: page-specific styles
+   (values moved from inline styles, unchanged)
+   ============================================ */
+
+.stay-lede{
+  font-size: 1.02rem;
+  opacity: 0.85;
+  margin-top: 1.2rem;
+  max-width: 42ch;
+}
+
+.stay-book{ text-align: center; }
+.stay-book .eyebrow{ justify-content: center; }
+.stay-book h2{
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  max-width: 30ch;
+  margin: 0 auto 1.5rem;
+}
+.stay-book .btn-signup{ display: inline-block; }

@@ -1,0 +1,238 @@
+<!-- footer styles load with the footer, so no page needs its own <link> for them -->
+<link rel="stylesheet" href="css/footer.css">
+
+<!-- ============ GLOBAL FOOTER (prefix: ft) ============ -->
+<footer class="ft" aria-labelledby="ft-brand">
+
+  <!-- handwritten note over the paper area (live text, decorative) -->
+  <div class="ft__note" aria-hidden="true">
+    <span class="ft__note-text">Nyaniba</span>
+    <svg class="ft__note-arrow" viewBox="0 0 60 50">
+      <path d="M52 4 C50 24 36 38 10 42 M10 42 L19 33 M10 42 L20 47"/>
+    </svg>
+  </div>
+
+  <!-- skyline: dark ground is part of the same SVG, so there is no seam -->
+  <div class="ft__sky" aria-hidden="true">
+    <svg class="ft__svg" viewBox="0 0 1100 120" preserveAspectRatio="xMaxYMax slice" focusable="false">
+      <defs>
+        <filter id="ft-pencil" x="-2%" y="-5%" width="104%" height="110%">
+          <feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="4" result="n"/>
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6"/>
+        </filter>
+        <symbol id="ft-palm" viewBox="0 0 30 60">
+          <path d="M15 60 Q13 42 16 22"/>
+          <path d="M16 22 Q8 14 1 20"/>
+          <path d="M16 22 Q10 10 6 8"/>
+          <path d="M16 22 Q16 12 18 5"/>
+          <path d="M16 22 Q24 12 30 14"/>
+          <path d="M16 22 Q26 18 29 27"/>
+          <path d="M16 22 Q9 20 4 29"/>
+          <path d="M16 22 Q22 23 26 31"/>
+        </symbol>
+      </defs>
+
+      <!-- tan watercolour washes -->
+      <g class="ft__wash">
+        <rect x="97" y="77" width="64" height="31"/>
+        <ellipse cx="178" cy="80" rx="15" ry="12"/>
+        <rect x="192" y="81" width="54" height="27"/>
+        <rect x="258" y="81" width="62" height="27"/>
+        <rect x="557" y="79" width="82" height="29"/>
+        <rect x="750" y="68" width="84" height="40"/>
+        <rect x="852" y="54" width="48" height="54"/>
+        <rect x="937" y="81" width="52" height="27"/>
+        <ellipse cx="38" cy="104" rx="16" ry="6"/>
+        <ellipse cx="1085" cy="94" rx="15" ry="11"/>
+        <ellipse cx="480" cy="105" rx="30" ry="4"/>
+      </g>
+
+      <!-- pencil linework -->
+      <g class="ft__line" filter="url(#ft-pencil)">
+        <!-- palms -->
+        <use href="#ft-palm" x="14" y="50" width="30" height="60"/>
+        <use href="#ft-palm" x="44" y="68" width="22" height="44"/>
+        <use href="#ft-palm" x="648" y="56" width="26" height="54"/>
+        <use href="#ft-palm" x="666" y="60" width="24" height="50"/>
+        <use href="#ft-palm" x="716" y="76" width="20" height="34"/>
+        <use href="#ft-palm" x="900" y="66" width="24" height="44"/>
+
+        <!-- A: low house with parapet + pergola -->
+        <path d="M95 108 V82 H158 V108 M93 82 H160 M95 82 V78 H158 V82 M95 74 H130 M95 74 V82 M130 74 V82"/>
+        <path d="M101 88 h6 v8 h-6z M113 88 h6 v8 h-6z M125 88 h6 v8 h-6z M137 88 h6 v8 h-6z M148 90 h6 v18"/>
+
+        <!-- B: narrow taller block with mast -->
+        <path d="M166 108 V68 H190 V108 M164 68 H192 M178 68 V59"/>
+        <path d="M172 76 h5 v7 h-5z M172 90 h5 v7 h-5z M182 76 h5 v7 h-5z M182 90 h5 v7 h-5z"/>
+
+        <!-- C: flat roof, window row -->
+        <path d="M192 108 V86 H246 V108 M190 86 H248 M192 83 H246 V86"/>
+        <path d="M198 92 h5 v7 h-5z M210 92 h5 v7 h-5z M222 92 h5 v7 h-5z M234 92 h5 v7 h-5z M240 108 V100 H245 V108"/>
+
+        <!-- D: arcade + scaffold frame -->
+        <path d="M256 108 V86 H320 V108 M254 86 H322 M256 84 H320"/>
+        <path d="M262 108 V97 q4 -6 8 0 V108 M276 108 V97 q4 -6 8 0 V108 M290 108 V97 q4 -6 8 0 V108 M304 108 V97 q4 -6 8 0 V108"/>
+        <path d="M300 76 V86 M300 76 H318 V86 M309 76 V86"/>
+
+        <!-- low street: shrubs, mast, wall -->
+        <path d="M368 108 q6 -6 12 0 q6 -5 12 0 M396 108 q4 -8 8 0 M438 108 q6 -5 12 0 q6 -6 12 0"/>
+        <path d="M484 108 V90 M480 95 H488"/>
+        <path d="M512 108 V102 H540 V108 M518 102 V108 M526 102 V108"/>
+
+        <!-- E: long low building -->
+        <path d="M555 108 V86 H640 V108 M553 86 H642 M555 84 H640 V86"/>
+        <path d="M562 92 h7 v8 h-7z M575 92 h7 v8 h-7z M588 92 h7 v8 h-7z M601 92 h7 v8 h-7z M614 92 h7 v8 h-7z M628 92 h7 v16"/>
+        <path d="M598 80 H640 M598 80 V86 M640 80 V86 M614 80 V86"/>
+
+        <!-- F: small block -->
+        <path d="M695 108 V90 H740 V108 M693 90 H742"/>
+        <path d="M700 96 h5 v7 h-5z M712 96 h5 v7 h-5z M724 96 h5 v12"/>
+
+        <!-- G: main hall + bell tower -->
+        <path d="M748 108 V84 H835 V108 M748 84 L752 78 H832 L835 84"/>
+        <path d="M756 108 V98 q4 -6 8 0 V108 M770 108 V98 q4 -6 8 0 V108 M784 108 V98 q4 -6 8 0 V108 M826 108 V98 q4 -6 8 0 V108"/>
+        <path d="M756 86 h5 v6 h-5z M770 86 h5 v6 h-5z M784 86 h5 v6 h-5z M828 86 h5 v6 h-5z"/>
+        <path d="M806 108 V22 H822 V108 M804 22 H824 M807 22 V16 H821 V22 M809 16 V9 H819 V16 M812 9 V6 H816 V9"/>
+        <path d="M811 30 h6 v10 h-6z M811 50 h6 v10 h-6z M811 70 h6 v8 h-6z M806 46 H822 M806 66 H822"/>
+
+        <!-- H: striped tall block with scaffold -->
+        <path d="M850 108 V60 H900 V108 M848 60 H902 M850 52 H900 M856 52 V60 M894 52 V60"/>
+        <path d="M858 60 V108 M868 60 V108 M880 60 V108 M890 60 V108"/>
+        <path d="M862 68 h4 v7 h-4z M872 68 h6 v7 h-6z M862 84 h4 v7 h-4z M872 84 h6 v7 h-6z"/>
+
+        <!-- I: low block with frame -->
+        <path d="M935 108 V90 H990 V108 M933 90 H992 M945 84 V90 M945 84 H965 V90"/>
+        <path d="M941 96 h5 v7 h-5z M953 96 h5 v7 h-5z M965 96 h5 v7 h-5z M977 96 h5 v12"/>
+
+        <!-- far right -->
+        <path d="M1040 108 V96 H1058 V108 M1038 96 H1060 M1085 108 V96"/>
+        <path d="M1078 100 q7 -6 14 0"/>
+      </g>
+
+      <!-- tiny figures -->
+      <g class="ft__person">
+        <circle cx="338" cy="99" r="1.4"/><rect x="337.2" y="100.5" width="1.6" height="7.5"/>
+        <circle cx="350" cy="100" r="1.3"/><rect x="349.3" y="101.3" width="1.4" height="6.7"/>
+        <circle cx="574" cy="100" r="1.4"/><rect x="573.2" y="101.5" width="1.6" height="6.5"/>
+        <circle cx="580" cy="100" r="1.3"/><rect x="579.3" y="101.3" width="1.4" height="6.7"/>
+        <circle cx="1012" cy="100" r="1.3"/><rect x="1011.3" y="101.3" width="1.4" height="6.7"/>
+        <circle cx="1016" cy="100" r="1.3"/><rect x="1015.3" y="101.3" width="1.4" height="6.7"/>
+      </g>
+
+      <!-- uneven dark ground = the top edge of the footer -->
+      <path class="ft__ground" filter="url(#ft-pencil)"
+        d="M-4 109 L30 108 L70 110 L120 108 L200 109.5 L300 108.5 L420 110 L520 108.5 L600 110 L700 108.5 L820 109.5 L900 108 L980 110 L1060 108.5 L1104 109.5 V121 H-4 Z"/>
+    </svg>
+  </div>
+
+  <div class="ft__body">
+    <div class="ft__board">
+      <div class="ft__inner">
+
+        <div class="ft__cols">
+
+          <!-- brand + contact + social -->
+          <div class="ft__col ft__col--brand">
+            <p class="ft__brand" id="ft-brand">Ɛdan</p>
+            <p class="ft__blurb">A creative urban lab in Nyaniba Estates, Accra. Creativity as urban infrastructure.</p>
+
+            <ul class="ft__contact">
+              <li><a href="tel:+233257040400">+233 25 704 0400</a></li>
+              <li><a href="mailto:info@edan.studio">info@edan.studio</a></li>
+            </ul>
+
+            <!-- [PLACEHOLDER] social URLs: replace each href="#" with the real account -->
+                        <ul class="ft__social">
+              <li>
+                <a href="#" aria-label="Instagram" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="X" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path class="ft__fill" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="YouTube" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10 9.5v5l4.5-2.5z"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="Facebook" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://wa.me/233257040400" aria-label="WhatsApp" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.6-2-1-.8.8c-.9-.4-1.7-1.2-2.1-2.1l.8-.8-1-2z"/></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <nav class="ft__col" aria-labelledby="ft-explore">
+            <h2 class="ft__label" id="ft-explore">Explore</h2>
+            <ul class="ft__list">
+              <li><a class="ft__link" href="index.html#why">Why</a></li>
+              <li><a class="ft__link" href="labs.html">Labs</a></li>
+              <li><a class="ft__link" href="about.html">Who we are</a></li>
+              <li><a class="ft__link" href="gather.html">Gather</a></li>
+            </ul>
+          </nav>
+
+          <nav class="ft__col" aria-labelledby="ft-visit">
+            <h2 class="ft__label" id="ft-visit">Visit</h2>
+            <ul class="ft__list">
+              <li><a class="ft__link" href="stay.html">Stay</a></li>
+              <li><a class="ft__link" href="eat.html">Eat</a></li>
+              <li><a class="ft__link" href="grow.html">Grow</a></li>
+              <li><a class="ft__link" href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+
+          <!-- signup + map -->
+          <div class="ft__col ft__col--connect">
+            <h2 class="ft__label">Stay connected</h2>
+            <!-- [PLACEHOLDER] form action: not wired to any email service yet -->
+            <form class="ft__form" action="#" method="post">
+              <label class="ft__sr" for="ft-email">Email address</label>
+              <input class="ft__input" id="ft-email" type="email" name="email" placeholder="Your email address" autocomplete="email">
+              <button class="ft__send" type="submit" aria-label="Subscribe">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg>
+              </button>
+            </form>
+
+            <div class="ft__map">
+              <iframe
+                title="Map showing Nyaniba Estates, Accra"
+                src="https://www.google.com/maps?q=Nyaniba+Estates,+Accra,+Ghana&amp;output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen></iframe>
+            </div>
+            <a class="ft__maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Nyaniba+Estates+Accra+Ghana" target="_blank" rel="noopener">Open in Google Maps</a>
+          </div>
+
+        </div>
+
+        <div class="ft__bottom">
+          <p>© Ɛdan, 2026. Nyaniba Estates, Accra, Ghana.</p>
+          <!-- [PLACEHOLDER] Privacy and Terms pages do not exist yet -->
+          <ul class="ft__legal">
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Live Server only: gives its reload script somewhere safe to go. Delete this line when pasting into Squarespace. -->
+</body>
