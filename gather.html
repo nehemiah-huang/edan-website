@@ -8,9 +8,11 @@
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/pages/gather.css">
+<link rel="stylesheet" href="css/pages/affiliate.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300..600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
 </head>
 <body class="page-gather">
 
@@ -37,39 +39,135 @@
 </header>
 
   <main id="main">
-  <!-- ============================================
-       INTRO — collage hero echoes the client's own
-       hand-drawn-linework + real-photo signature style
-       ============================================ -->
-  <section class="section section-cotton page-top-padding">
-    <div class="wrap">
-      <div class="section-head pricing-head reveal">
-        <span class="eyebrow">get involved</span>
-        <h2>Become an Ɛdan affiliate.</h2>
-      </div>
+  <!-- ============ GATHER: BECOME AN AFFILIATE (prefix: af) ============
+     IMAGES TO REPLACE (2):
+       1. /REPLACE-WITH-GATHER-COURTYARD.jpg     big photo (people in the courtyard)
+       2. /REPLACE-WITH-GATHER-BREEZEBLOCK.jpg   small tilted photo (breeze-block wall)
+============================================================== -->
+<section class="af" aria-labelledby="af-title">
+  <div class="af__board">
+    <div class="af__inner">
+      <div class="af__grid">
 
-      <div class="gather-intro">
-        <div class="collage-hero reveal">
-          <svg viewBox="0 0 400 340" aria-hidden="true">
-            <g fill="none" stroke="#9C4B34" stroke-width="1.4" opacity="0.75">
-              <path d="M20,120 L20,300 L340,300 L340,140 L180,20 L20,120 Z"/>
-              <path d="M20,120 L340,140"/>
-              <rect x="60" y="180" width="50" height="60"/>
-              <rect x="250" y="170" width="60" height="70"/>
-              <circle cx="180" cy="60" r="14"/>
-            </g>
-          </svg>
-          <img class="collage-photo-inset" src="images/garden-plant.jpg" alt="A wild plant growing in Ɛdan's garden">
+        <!-- LEFT: copy -->
+        <div class="af__copy">
+          <p class="af__eyebrow">get involved</p>
+          <h2 class="af__title" id="af-title">
+            <span class="af__line">Become an Ɛdan</span>
+            <span class="af__line">affiliate.</span>
+          </h2>
+
+          <div class="af__text">
+            <p>An Ɛdan research affiliate is someone who chooses to base part of their practice within the space. It is a light, flexible affiliation for those who want to work alongside others while remaining independent in their projects and commitments.</p>
+            <p>Affiliates make a subsidised contribution of 800 GHS per month, or an agreed weekly rate, to use the workspace and shared facilities — including the studio labs and café &amp; co-working space. This contribution sustains Ɛdan’s wider purpose of keeping creative space accessible and community-led.</p>
+            <p>Affiliates work on their own ideas and research while committing to the core values of the space: respect, peace and experimentation. Each month we host a social gathering to encourage exchange and connection.</p>
+          </div>
+
+          
         </div>
 
-        <div class="reveal reveal-delay-1 gather-copy">
-          <p>An Ɛdan research affiliate is someone who chooses to base part of their practice within the space. It is a light, flexible affiliation for those who want to work alongside others while remaining independent in their projects and commitments.</p>
-          <p>Affiliates make a subsidised contribution of 800 GHS per month, or an agreed weekly rate, to use the workspace and shared facilities — including the studio labs and café &amp; co-working space. This contribution sustains Ɛdan's wider purpose of keeping creative space accessible and community-led.</p>
-          <p>Affiliates work on their own ideas and research while committing to the core values of the space: respect, peace and experimentation. Each month we host a social gathering to encourage exchange and connection.</p>
+        <!-- RIGHT: collage -->
+        <div class="af__visual">
+
+          <!-- back layer: ring, sketches, arrows -->
+          <svg class="af__art af__art--back" viewBox="0 0 600 520" aria-hidden="true" focusable="false">
+            <defs>
+              <filter id="af-pencil" filterUnits="userSpaceOnUse" x="0" y="0" width="600" height="520">
+                <feTurbulence type="fractalNoise" baseFrequency=".04" numOctaves="2" seed="7" result="n"/>
+                <feDisplacementMap in="SourceGraphic" in2="n" scale="1.5"/>
+              </filter>
+            </defs>
+
+            <g class="af__pencil" filter="url(#af-pencil)">
+              <!-- ring: solid on the right, dashed on the left -->
+              <path class="af__ring" d="M275 13 A225 225 0 0 1 275 463"/>
+              <path class="af__ring af__ring--dash" d="M275 13 A225 225 0 0 0 275 463"/>
+
+              <!-- ground line behind the photos -->
+              <path d="M40 346 H590"/>
+              <path d="M70 346 V351 M150 346 V350 M470 346 V351 M560 346 V350"/>
+
+              <!-- left palm + grass -->
+              <path d="M76 352 C74 320 72 290 70 262"/>
+              <path d="M70 262 C58 250 44 252 36 262"/>
+              <path d="M70 262 C60 244 50 238 40 240"/>
+              <path d="M70 262 C70 246 72 236 76 228"/>
+              <path d="M70 262 C82 248 96 246 106 254"/>
+              <path d="M70 262 C84 256 98 262 104 274"/>
+              <path d="M70 262 C58 262 46 272 42 284"/>
+              <path d="M70 262 C78 270 86 282 88 294"/>
+              <path d="M60 352 C58 338 50 330 44 324"/>
+              <path d="M66 352 C66 336 62 326 58 316"/>
+              <path d="M84 352 C88 338 96 330 104 326"/>
+              <path d="M92 352 C98 346 104 344 110 346"/>
+              <path d="M44 352 C40 344 34 340 28 340"/>
+
+              <!-- right house -->
+              <path d="M410 168 H522 L548 204 H562 V346"/>
+              <path d="M410 173 H520"/>
+              <path d="M522 168 V346"/>
+              <path d="M432 215 h52 v62 h-52z"/>
+              <path d="M435 218 h46 v56 h-46z"/>
+              <path d="M458 215 V277 M432 246 H484"/>
+              <path d="M500 346 V262 H528 V346"/>
+
+              <!-- right palm -->
+              <path d="M560 182 C558 230 556 280 556 340"/>
+              <path d="M560 182 C548 170 536 170 530 178"/>
+              <path d="M560 182 C552 166 548 160 544 156"/>
+              <path d="M560 182 C562 168 566 160 570 154"/>
+              <path d="M560 182 C574 170 588 170 596 178"/>
+              <path d="M560 182 C574 180 588 188 592 200"/>
+              <path d="M560 182 C546 186 536 196 534 208"/>
+
+              <!-- small crosshair mark -->
+              <path d="M349 470 H361 M355 464 V476"/>
+            </g>
+
+            <!-- arrows -->
+            <g class="af__arrow-line">
+              <path d="M58 82 C54 98 68 108 88 112 M88 112 L79 106 M88 112 L80 119"/>
+              <path d="M517 72 C516 92 500 104 478 110 M478 110 L488 104 M478 110 L487 117"/>
+              <path d="M96 500 C122 498 136 484 138 460 M138 460 L132 470 M138 460 L145 469"/>
+              <path d="M514 408 C504 404 494 400 484 396 M484 396 L494 394 M484 396 L492 404"/>
+            </g>
+
+            <!-- small ochre dots -->
+            <g class="af__dot">
+              <circle cx="100" cy="105" r="2.2"/>
+              <circle cx="145" cy="60" r="2.2"/>
+              <circle cx="220" cy="450" r="2.2"/>
+            </g>
+          </svg>
+
+          <!-- photos: real images, swap the src -->
+          <figure class="af__photo af__photo--main">
+            <img src="images/garden-plant.jpg" alt="People working and talking together in a shaded courtyard at Ɛdan">
+          </figure>
+          <figure class="af__photo af__photo--side">
+            <img src="images/breeze-block-detail.webp" alt="Detail of a white breeze-block wall">
+          </figure>
+
+          <!-- front layer: tape + torn mustard paper -->
+          <svg class="af__art af__art--front" viewBox="0 0 600 520" aria-hidden="true" focusable="false">
+            <polygon class="af__tape" points="200,80 296,76 297,92 202,95"/>
+            <polygon class="af__scrap" points="100,380 128,377 153,381 151,408 154,434 126,436 99,433 101,405"/>
+            <polygon class="af__scrap af__scrap--light" points="104,384 128,382 148,385 147,408 149,428 126,430 104,428 105,406"/>
+          </svg>
+
+          <!-- handwritten notes (live text, decorative) -->
+          <div class="af__notes" aria-hidden="true">
+            <span class="af__note af__note--1">work together</span>
+            <span class="af__note af__note--2">share</span>
+            <span class="af__note af__note--3">build</span>
+            <span class="af__note af__note--4">Ɛdan<br>research<br>labs</span>
+          </div>
+
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- ============================================
        WHAT YOU ACCESS

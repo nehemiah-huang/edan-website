@@ -83,3 +83,5 @@ body{
 /* ---- about page: one continuous paper. Sections are transparent and the page paints it. ---- */
 body.page-about{ background-color: var(--paper); background-image: var(--paper-grain); }
 .page-about .section-cotton{ background: transparent; }
+/* ---- gather page: same continuous paper as about ---- */
+body.page-gather{ background-color: var(--paper); background-image: var(--paper-grain); }
