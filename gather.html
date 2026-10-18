@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/pages/gather.css">
+<link rel="stylesheet" href="css/pages/benefits.css">
 <link rel="stylesheet" href="css/pages/affiliate.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -169,27 +170,156 @@
   </div>
 </section>
 
-  <!-- ============================================
-       WHAT YOU ACCESS
-       ============================================ -->
-  <section class="section section-terracotta">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">what you access</span>
-        <h2>What comes with it.</h2>
+<!-- ============ GATHER: WHAT COMES WITH IT (prefix: wc) ============
+     No images in this section. The drawing is inline SVG (editable below).
+============================================================== -->
+<section class="wc" aria-labelledby="wc-title">
+  <div class="wc__board">
+    <div class="wc__inner">
+      <div class="wc__grid">
+
+        <!-- LEFT: heading, list, closing line -->
+        <div class="wc__copy">
+          <p class="wc__eyebrow">what you access</p>
+          <h2 class="wc__title" id="wc-title">What comes with it.</h2>
+
+          <ol class="wc__list" role="list">
+            <li class="wc__item">
+              <span class="wc__num" aria-hidden="true">01</span>
+              <p class="wc__txt">Access to the shared workspace, studio labs and café &amp; co-working, in a calm, open environment designed for focus and exchange.</p>
+            </li>
+            <li class="wc__item">
+              <span class="wc__num" aria-hidden="true">02</span>
+              <p class="wc__txt">A place to base your projects, research or practice within a women-led, community-grounded creative space.</p>
+            </li>
+            <li class="wc__item">
+              <span class="wc__num" aria-hidden="true">03</span>
+              <p class="wc__txt">A monthly social gathering that builds connection across disciplines and encourages informal dialogue.</p>
+            </li>
+            <li class="wc__item">
+              <span class="wc__num" aria-hidden="true">04</span>
+              <p class="wc__txt">The opportunity to propose and host your own events, workshops or small city-focused interventions.</p>
+            </li>
+            <li class="wc__item">
+              <span class="wc__num" aria-hidden="true">05</span>
+              <p class="wc__txt">Invitations into collaborative projects where there is alignment.</p>
+            </li>
+            <li class="wc__item">
+              <span class="wc__num" aria-hidden="true">06</span>
+              <p class="wc__txt">A voice in shaping the future direction of Ɛdan’s research and programming.</p>
+            </li>
+            <li class="wc__item">
+              <span class="wc__num" aria-hidden="true">07</span>
+              <p class="wc__txt">Proximity to a network of people committed to actively building a more thoughtful, generous and just Accra, and cities beyond.</p>
+            </li>
+          </ol>
+
+          <div class="wc__note">
+            <span class="wc__rule" aria-hidden="true"></span>
+            <p>
+              <span class="wc__sent">It offers space, community and shared intention.</span>
+              <span class="wc__sent">A light structure, but a serious commitment to shaping the city with care.</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- RIGHT: floor-plan drawing (decorative) -->
+        <div class="wc__visual" aria-hidden="true">
+          <svg class="wc__art" viewBox="0 0 560 450" focusable="false">
+            <defs>
+              <filter id="wc-pencil" filterUnits="userSpaceOnUse" x="0" y="0" width="560" height="450">
+                <feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="2" seed="3" result="n"/>
+                <feDisplacementMap in="SourceGraphic" in2="n" scale="1.1"/>
+              </filter>
+            </defs>
+
+            <g filter="url(#wc-pencil)">
+              <!-- dashed construction lines -->
+              <path class="wc__dash" d="M266 44 A186 186 0 0 0 266 416"/>
+              <path class="wc__dash" d="M275 7 V115"/>
+              <path class="wc__dash" d="M392 237 C440 235 495 205 505 156"/>
+              <path class="wc__dash" d="M423 298 C470 300 505 335 500 370 C497 405 465 430 437 438"/>
+
+              <!-- thin solid ring (right half) -->
+              <path class="wc__rust wc__thin" d="M266 44 A186 186 0 0 1 266 416"/>
+
+              <!-- floor plan walls -->
+              <g class="wc__rust">
+                <path d="M168 272 V115 H292 V140 H392 V291 H345"/>
+                <path d="M168 272 H205"/>
+                <path d="M205 272 V359 H294 V272 Z"/>
+                <path d="M300 291 V263 A28 28 0 0 1 328 291"/>
+              </g>
+
+              <!-- furniture -->
+              <g class="wc__rust wc__thin">
+                <rect x="233" y="200" width="66" height="22"/>
+                <circle cx="242" cy="195" r="3"/><circle cx="257" cy="195" r="3"/><circle cx="272" cy="195" r="3"/><circle cx="288" cy="195" r="3"/>
+                <circle cx="242" cy="227" r="3"/><circle cx="257" cy="227" r="3"/><circle cx="272" cy="227" r="3"/><circle cx="288" cy="227" r="3"/>
+                <rect x="344" y="178" width="13" height="74"/>
+                <circle cx="333" cy="193" r="3.2"/><circle cx="333" cy="211" r="3.2"/><circle cx="333" cy="235" r="3.2"/>
+                <rect x="198" y="183" width="6" height="9"/><rect x="198" y="201" width="6" height="9"/><rect x="198" y="219" width="6" height="9"/>
+                <rect x="232" y="150" width="58" height="10"/>
+                <path d="M238 153V157M246 153V157M254 153V157"/>
+                <rect x="292" y="140" width="19" height="29"/>
+                <circle cx="270" cy="312" r="11"/>
+                <path class="wc__dots" d="M294 359 H345 V300"/>
+              </g>
+
+              <!-- tree -->
+              <g class="wc__rust wc__thin">
+                <circle cx="367" cy="315" r="19"/>
+                <path d="M367 297V333"/>
+                <path d="M367 297V333" transform="rotate(30 367 315)"/>
+                <path d="M367 297V333" transform="rotate(60 367 315)"/>
+                <path d="M367 297V333" transform="rotate(90 367 315)"/>
+                <path d="M367 297V333" transform="rotate(120 367 315)"/>
+                <path d="M367 297V333" transform="rotate(150 367 315)"/>
+              </g>
+
+              <!-- callouts + leaders -->
+              <g class="wc__rust wc__thin">
+                <circle cx="110" cy="103" r="18"/>
+                <path d="M96 68L104 85"/>
+                <path d="M115 120L138 183"/>
+                <path d="M513 116L482 157"/>
+                <path d="M120 360L160 401"/>
+                <path d="M160 320V403"/>
+                <path d="M161 403H283"/>
+                <circle cx="396" cy="362" r="11"/>
+                <path d="M396 373V416"/>
+              </g>
+
+              <!-- ink lines -->
+              <g class="wc__ink-line">
+                <path d="M392 157H505"/>
+                <path d="M308 416H514"/>
+              </g>
+            </g>
+
+            <!-- points -->
+            <g class="wc__pt">
+              <circle cx="275" cy="19" r="2.4"/><circle cx="275" cy="115" r="2.4"/>
+              <circle cx="115" cy="120" r="2.4"/><circle cx="505" cy="156" r="2.4"/>
+              <circle cx="392" cy="157" r="2.4"/><circle cx="168" cy="255" r="2.4"/>
+              <circle cx="115" cy="310" r="2.4"/><circle cx="395" cy="307" r="2.4"/>
+              <circle cx="482" cy="415" r="2.4"/><circle cx="514" cy="415" r="2.4"/>
+              <circle cx="257" cy="388" r="1.8"/><circle cx="267" cy="388" r="1.8"/><circle cx="278" cy="388" r="1.8"/>
+            </g>
+            <g class="wc__pt wc__pt--rust">
+              <circle cx="513" cy="116" r="3"/><circle cx="161" cy="403" r="3"/><circle cx="396" cy="416" r="3"/>
+            </g>
+          </svg>
+
+          <span class="wc__label wc__label--space">Space</span>
+          <span class="wc__label wc__label--exchange">Exchange</span>
+          <span class="wc__label wc__label--shared">Shared practice</span>
+        </div>
+
       </div>
-      <ul class="access-list reveal">
-        <li>Access to the shared workspace, studio labs and café &amp; co-working, in a calm, open environment designed for focus and exchange.</li>
-        <li>A place to base your projects, research or practice within a women-led, community-grounded creative space.</li>
-        <li>A monthly social gathering that builds connection across disciplines and encourages informal dialogue.</li>
-        <li>The opportunity to propose and host your own events, workshops or small city-focused interventions.</li>
-        <li>Invitations into collaborative projects where there is alignment.</li>
-        <li>A voice in shaping the future direction of Ɛdan's research and programming.</li>
-        <li>Proximity to a network of people committed to actively building a more thoughtful, generous and just Accra, and cities beyond.</li>
-      </ul>
-      <p class="note-italic">It offers space, community and shared intention. A light structure, but a serious commitment to shaping the city with care.</p>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- ============================================
        PRICING (GHS)
