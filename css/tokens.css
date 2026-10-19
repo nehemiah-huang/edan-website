@@ -85,3 +85,30 @@ body.page-about{ background-color: var(--paper); background-image: var(--paper-g
 .page-about .section-cotton{ background: transparent; }
 /* ---- gather page: same continuous paper as about ---- */
 body.page-gather{ background-color: var(--paper); background-image: var(--paper-grain); }
+
+/* ===== BRAND TYPE OVERRIDE: Space Grotesk everywhere, Space Mono for small text ===== */
+body,
+body *,
+body *::before,
+body *::after{
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-style: normal !important;
+  font-optical-sizing: auto !important;
+  font-variation-settings: normal !important;
+}
+
+/* small functional text stays Space Mono */
+body :is(
+  .about-figure__caption, .about-placeholder, .bts__credit, .circle-cta,
+  .circle-kicker, .circle-thread text, .door-card .door-mark, .door-card .door-tag,
+  .eyebrow, .footer-bottom, .footer-brand, .footer-col h5, .friends-list,
+  .hb__eyebrow, .hero-eyebrow, .hero-scroll, .hours-time, .lab-index, .lab-link,
+  .labs-teaser-mark, .motif-num, .nav-note, .pillar-mark,
+  .pricing-card .btn-signup, .pricing-card .price-period,
+  .space-card .space-label .tag, .stat
+){ font-family: 'Space Mono', monospace !important; }
+
+/* hand-drawn annotation notes only */
+body :is(.bts__note, .ci__lbl, .cr__note, .hb__note, .os__note, .ft__note, .ft__note *){
+  font-family: 'Reenie Beanie', 'Bradley Hand', cursive !important;
+}
