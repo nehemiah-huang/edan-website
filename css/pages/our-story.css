@@ -6,7 +6,7 @@
   --os-ink:#1f1913; --os-body:#2a221a; --os-rule:rgba(92,70,48,.45);
   position:relative; overflow:hidden; color:var(--os-ink);
   padding:clamp(4.5rem,20.27cqw,7rem) 0 clamp(3rem,6vw,6rem);
-  font-family:var(--nav-serif,"Newsreader",Georgia,serif);
+  font-family:"Space Grotesk","Helvetica Neue",Arial,sans-serif;
 }
 .os__defs{ position:absolute; width:0; height:0; }
 .os__board{ container-type:inline-size; width:min(100%,120rem); margin-inline:auto; }
@@ -15,11 +15,11 @@
 /* ---- header (centred) ---- */
 .os__head{ display:flex; flex-direction:column; align-items:center; text-align:center; padding-bottom:1cqw; }
 .os__head > *{ margin:0; }
-.os__eyebrow{ font-size:clamp(1.5rem,.9cqw,.9rem); letter-spacing:.17em; text-transform:uppercase; line-height:1; }
-.os__rule{ width:4.86cqw; border-top:1px solid var(--os-ink); margin:1.2cqw 0 3cqw; }
-.os__title{ font-family:var(--nav-serif,"Newsreader",Georgia,serif); font-weight:400; font-size:9cqw; line-height:10.4cqw; letter-spacing:-.07em; word-spacing:.06em; white-space:nowrap; font-optical-sizing:none; font-variation-settings:"opsz" 53; }
+.os__eyebrow{ font-family:"Space Mono",ui-monospace,monospace; font-size:clamp(.72rem,.8cqw,.95rem); letter-spacing:.17em; text-transform:uppercase; line-height:1; }
+.os__rule{ width:4.86cqw; border-top:1px solid var(--os-ink); margin:1.2cqw 0 2.4cqw; }
+.os__title{ font-family:"Space Grotesk","Helvetica Neue",Arial,sans-serif; font-weight:500; font-size:3.8cqw; line-height:1.05; letter-spacing:-.04em; white-space:nowrap; }
 .os__title span{ display:inline; }
-.os__intro{ width:90cqw; margin-top:4.5cqw; font-size:clamp(1rem,2.15cqw,2.3rem); line-height:1.7; color:var(--os-body); letter-spacing:-.005em; text-wrap:balance; }
+.os__intro{ width:90cqw; margin-top:2.6cqw; font-size:clamp(1.1rem,2.2cqw,2.8rem); line-height:1.6; color:var(--os-body); letter-spacing:-.01em; text-wrap:balance; }
 .os__ln{ display:inline; }
 
 /* ---- numbered blocks ---- */
@@ -72,7 +72,7 @@
   .os__eyebrow{ order:1; font-size:.76rem; }
   .os__rule{ order:2; width:2.6rem; margin:.7rem 0 1.2rem; }
   .os__title span{ display:block; }
-  .os__title{ order:3; font-size:clamp(2.6rem,13.4vw,4.4rem); line-height:.93; margin:0 0 1.1rem -.04em; }
+  .os__title{ order:3; font-size:clamp(1.9rem,8.4vw,3rem); line-height:1.05; margin:0 0 1.1rem; }
   .os__intro{ order:4; width:auto; margin:0; font-size:1.05rem; line-height:1.55; }
   .os__ln{ display:inline; white-space:normal; }
   .os__block{ display:flex; flex-direction:column; margin-top:2.6rem; }

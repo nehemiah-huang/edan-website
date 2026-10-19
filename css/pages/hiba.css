@@ -12,7 +12,7 @@
   --hb-ink:   #1f1913;
   --hb-pencil:#3d362d;
   --hb-hand:  "Reenie Beanie", "Caveat", "Segoe Script", "Bradley Hand", cursive;
-  --hb-serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --hb-serif: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
   --hb-mono:  "Space Mono", ui-monospace, monospace;
 
   position: relative;
@@ -59,12 +59,10 @@
   top: 8cqw;
   margin: 0;
   font-family: var(--hb-serif);
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-size: 4.95cqw;
-  line-height: 4.63cqw;
-  letter-spacing: -0.04em;
-  word-spacing: 0.1em;
+  font-weight: 500;
+  font-size: 3.8cqw;
+  line-height: 3.95cqw;
+  letter-spacing: -0.035em;
   color: var(--hb-ink);
 }
 .hb__title > span{ display: block; white-space: nowrap; }
@@ -73,23 +71,20 @@
 .hb__name{
   position: absolute;
   left: 5.3cqw;
-  top: 25cqw;
+  top: 22.5cqw;
   margin: 0;
   font-family: var(--hb-serif);
-  font-weight: 400;
-  font-size: 7.7cqw;
+  font-weight: 500;
+  font-size: 5cqw;
   line-height: 1;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.035em;
   color: var(--hb-ink);
-  background: linear-gradient(180deg, #1f1913 0 60%, #43372b 100%);
-  -webkit-background-clip: text; background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .hb__bio{
   position: absolute;
   left: 5.61cqw;
-  top: 33.7cqw;
+  top: 30.5cqw;
   width: 27cqw;
   margin: 0;
   font-family: var(--hb-serif);
@@ -247,8 +242,8 @@
 
   .hb__eyebrow{ order: 1; font-size: 0.72rem; }
   .hb__rule{ order: 2; width: 2.6rem; margin-top: 0.7rem; }
-  .hb__title{ order: 3; margin-top: 1.4rem; font-size: clamp(2.6rem, 14vw, 5rem); line-height: 0.94; }
-  .hb__name{ order: 4; margin-top: 1.4rem; font-size: clamp(4.6rem, 25vw, 8.5rem); }
+  .hb__title{ order: 3; margin-top: 1.4rem; font-size: clamp(1.9rem, 8.4vw, 3rem); line-height: 1.05; }
+  .hb__name{ order: 4; margin-top: 1.4rem; font-size: clamp(2.4rem, 11.5vw, 4rem); }
 
   .hb__figure{ order: 5; width: 100%; margin: 2rem 0 0; }
 

@@ -47,12 +47,14 @@
 .bts__title{
   position: absolute;
   left: 5cqw;
-  top: 4.3cqw;
+  top: 5.2cqw;
   margin: 0;
-  font-size: 6.1cqw;
+  font-family: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+  font-size: 3.8cqw;
   font-weight: 500;
-  line-height: 0.84;
-  letter-spacing: -0.035em;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  text-transform: none;
   color: var(--bts-ink);
 }
 .bts__title > span{ display: block; }
@@ -61,10 +63,11 @@
 .bts__body{
   position: absolute;
   left: 5cqw;
-  top: 16.9cqw;
-  width: 25.5cqw;
+  top: 15.6cqw;
+  width: 28cqw;
   margin: 0;
-  font-size: 1.1cqw;
+  font-family: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.2cqw;
   line-height: 1.48;
   color: #625c51;
 }
@@ -221,7 +224,7 @@
 
   .bts__title{
     order: 1;
-    font-size: clamp(3rem, 13.4vw, 6.5rem);
+        font-size: clamp(1.9rem, 8.4vw, 3rem);
   }
   .bts__title-line2{ padding-left: 0.95em; }
   .bts__body{
@@ -387,24 +390,26 @@
   --ff-sub: #4a4036;
   color: var(--ff-ink);
   padding: clamp(3.5rem, 7vw, 6.5rem) var(--nav-margin);
-  font-family: var(--nav-serif, "Newsreader", Georgia, serif);
+  font-family: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
 }
 .ff__inner{ max-width: 120rem; margin-inline: auto; text-align: center; }          /* ← changed */
+
 .ff__eyebrow{
   margin: 0;
-  font: 400 clamp(.72rem, .6rem + .35vw, .95rem)/1 var(--nav-serif, "Newsreader", Georgia, serif);
+  font: 400 clamp(.72rem, .78vw, .95rem)/1 "Space Mono", ui-monospace, monospace;
   letter-spacing: .17em;
   text-transform: uppercase;
   color: var(--ff-ink);
 }
+
 .ff__rule{ display: block; width: clamp(2.4rem, 4vw, 3.6rem); border-top: 1px solid var(--ff-ink); margin: .9rem auto clamp(1.6rem, 3vw, 2.4rem); }   /* ← changed (auto margins centre it) */
 .ff__note{
   margin: 0;
-  max-width: none;                                   /* ← changed: no cap, spans the same width as the lines below */
-  font-size: clamp(1.5rem, 1rem + 2vw, 3rem);        /* ← changed: bigger so it fills the width */
+  max-width: none;
+  font-size: clamp(1.4rem, 2.2vw, 2.8rem);
   line-height: 1.3;
-  letter-spacing: -.012em;
-  text-wrap: pretty;                                 /* ← changed: fills each line, no narrow balanced column */
+  letter-spacing: -.02em;
+  text-wrap: pretty;
   color: var(--ff-ink);
 }
 .ff__list{
