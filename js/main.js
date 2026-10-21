@@ -26,15 +26,14 @@ function onScroll(){
   // }
   nav.classList.add('scrolled');
 
-  if(nav.classList.contains('menu-open')){
-    nav.classList.remove('nav-hidden');    // never hide it under an open mobile menu
-  } else if(y <= 60){
-    nav.classList.remove('nav-hidden');    // at the top
-  } else if(y > lastY + 6 && y > 120){
-    nav.classList.add('nav-hidden');       // scrolling down
-  } else if(y < lastY - 6){
-    nav.classList.remove('nav-hidden');    // scrolling up
+// AFTER
+  /* the bar shows only at the very top of the page (or while the mobile menu is open) */
+  if(nav.classList.contains('menu-open') || y <= 60){
+    nav.classList.remove('nav-hidden');
+  } else {
+    nav.classList.add('nav-hidden');
   }
+  lastY = y;
   lastY = y;
 }
 window.addEventListener('scroll', onScroll, { passive: true });
