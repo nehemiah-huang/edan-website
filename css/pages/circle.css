@@ -57,21 +57,116 @@
 .ci .scrap.a{ fill:#c6944a; } .ci .scrap.b{ fill:#c9994f; } .ci .scrap.c{ fill:#dcb988; }
 
 /* ---- tablet / phone: one column (no mobile reference was given: this is a sensible stack) ---- */
-@media (max-width:860px){
-  .ci__board{ container-type:normal; max-width:36rem; padding-inline:1.4rem; }
-  .ci__stage{ aspect-ratio:auto; display:flex; flex-direction:column; padding:1.6rem 0 2rem; }
-  .ci__stage::before,.ci__stage::after{ left:0; width:100%; }
-  .ci__stage::before{ top:0; }
-  .ci__stage::after{ top:auto; bottom:0; }
-  .ci__art{ position:relative; width:100%; order:2; margin-top:1.8rem; }
-  .ci__copy{ position:static; width:auto; order:1; }
-  .ci__t1{ font-size:clamp(1.9rem,8.5vw,2.8rem); }
-  .ci__t2{ font-size:clamp(4.6rem,24vw,7.6rem); }
-  .ci__t3{ font-size:clamp(1.9rem,8.5vw,2.8rem); }
-  .ci__t2{ margin-top:.3rem; }
-  .ci__t3{ margin-top:-.5rem; }
-  .ci__rule,.ci__title + .ci__rule{ width:2.6rem; margin:1.7rem 0 1.1rem; }
-  .ci__manifesto p{ font-size:1.05rem; line-height:1.9; }
-  .ci__tagline{ font-size:1.1rem; text-wrap:balance; }
-  .ci__sketch{ position:relative; left:auto; top:auto; order:3; width:min(100%,24rem); margin:-2.2rem calc((100% - 100vw)/2) 0 auto; }
+
+/* ---- tablet / phone ---- */
+@media (max-width: 860px) {
+  .ci__board {
+    container-type: normal;
+    max-width: 36rem;
+    width: 100%;
+    padding-inline: 1.2rem;
+    box-sizing: border-box;
+  }
+
+  .ci__stage {
+    aspect-ratio: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.6rem 0 2rem;
+  }
+
+  .ci__stage::before,
+  .ci__stage::after {
+    left: 0;
+    width: 100%;
+  }
+
+  .ci__stage::before {
+    top: 0;
+  }
+
+  .ci__stage::after {
+    top: auto;
+    bottom: 0;
+  }
+
+  /* Let the title and text become individual flex items */
+  .ci__copy {
+    display: contents;
+  }
+
+  .ci__title {
+    order: 1;
+    width: 100%;
+  }
+
+  .ci__t1 {
+    font-size: clamp(1.9rem, 8.5vw, 2.8rem);
+  }
+
+  .ci__t2 {
+    font-size: clamp(4.6rem, 24vw, 7.6rem);
+    margin-top: .3rem;
+  }
+
+  .ci__t3 {
+    font-size: clamp(1.9rem, 8.5vw, 2.8rem);
+    margin-top: -.5rem;
+  }
+
+  /* Image designs directly after the title */
+  .ci__art {
+    position: relative;
+    left: auto;
+    top: auto;
+    order: 2;
+    width: 100%;
+    max-width: 30rem;
+    height: auto;
+    aspect-ratio: 610 / 566;
+    margin: 1.8rem auto 0;
+    flex-shrink: 0;
+    box-sizing: border-box;
+  }
+
+  /* Restore the artwork's original proportions */
+  .ci__rule,
+  .ci__title + .ci__rule {
+    order: 3;
+    width: 2.6rem;
+    margin: 1.7rem 0 1.1rem;
+  }
+
+  .ci__manifesto {
+    order: 4;
+  }
+
+  .ci__manifesto p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+  }
+
+  .ci__tagline {
+    order: 5;
+    font-size: 1.1rem;
+    text-wrap: balance;
+  }
+
+  /* Center the building sketch instead of pushing it sideways */
+  .ci__sketch {
+    position: relative;
+    left: auto;
+    top: auto;
+    order: 6;
+    display: block;
+    width: min(100%, 24rem);
+    height: auto;
+    margin: 1rem auto 0;
+  }
+    /* Shift the complete artwork left on mobile */
+  .ci__art {
+    transform: translateX(-8%);
+  }
+  
 }

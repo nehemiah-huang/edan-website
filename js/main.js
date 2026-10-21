@@ -19,11 +19,12 @@ let lastY = 0;
 function onScroll(){
   const y = Math.max(0, window.scrollY);   // iOS rubber-banding can report negative values
 
-  if(!hasHero || y > 60){
-    nav.classList.add('scrolled');
-  } else {
-    nav.classList.remove('scrolled');
-  }
+  // if(!hasHero || y > 60){
+  //   nav.classList.add('scrolled');
+  // } else {
+  //   nav.classList.remove('scrolled');
+  // }
+  nav.classList.add('scrolled');
 
   if(nav.classList.contains('menu-open')){
     nav.classList.remove('nav-hidden');    // never hide it under an open mobile menu

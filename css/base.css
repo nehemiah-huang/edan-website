@@ -1156,22 +1156,37 @@ section{ position: relative; }
 }
 
 /* ---- nav over the home hero: transparent with light text until you scroll (main.js adds .scrolled) ---- */
-body .site-nav{
-  transition: transform .4s var(--ease), background-color .4s var(--ease), color .4s var(--ease);
-}
-.site-nav::before{
-  content: '';
-  position: absolute;
-  left: 0; right: 0; top: 0; height: 170%;
-  background: linear-gradient(rgba(18,13,8,.5), rgba(18,13,8,0));
-  opacity: 0;
-  pointer-events: none;
-  z-index: -1;
-  transition: opacity .4s var(--ease);
-}
-body.page-home .site-nav:not(.scrolled):not(.menu-open){
+
+/* ---- consistent Ɛdan navbar across every page ---- */
+
+.site-nav {
+  background: rgba(35, 29, 23, 0.72);
+  color: #F6EFE0;
   --nav-ink: #F6EFE0;
-  --nav-rule: rgba(246,239,224,.5);
-  background-color: transparent;
+  --nav-rule: rgba(246, 239, 224, 0.45);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(8px);
 }
-body.page-home .site-nav:not(.scrolled):not(.menu-open)::before{ opacity: 1; }
+
+.site-nav::before {
+  opacity: 1;
+}
+
+/* Keep the same appearance when scrolling */
+.site-nav.scrolled {
+  background: transparent;
+  --nav-ink: #F6EFE0;
+  --nav-rule: rgba(246, 239, 224, 0.45);
+}
+
+/* Keep the menu readable on mobile */
+@media (max-width: 1060px) {
+  .nav-links {
+    background: transparent;
+    color: #F6EFE0;
+  }
+
+  .nav-links a:focus-visible {
+    outline-color: #F6EFE0;
+  }
+}
