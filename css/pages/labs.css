@@ -445,3 +445,25 @@
 .page-labs .method__closing-mark {
   font-variant-emoji: text;
 }
+
+/* Replace arrow glyphs with consistent CSS arrows */
+.page-labs .round-link__arrow,
+.page-labs .field-tab__mark,
+.page-labs .text-link span,
+.page-labs .dossier-link span {
+  font-size: 0 !important;
+  font-variant-emoji: text;
+}
+
+.page-labs .round-link__arrow::after,
+.page-labs .field-tab__mark::after,
+.page-labs .text-link span::after,
+.page-labs .dossier-link span::after {
+  content: "↗";
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+  color: currentColor;
+  -webkit-text-fill-color: currentColor;
+}
