@@ -434,3 +434,14 @@
   }
   .page-labs .field-map * { animation: none !important; rotate: none !important; translate: none !important; scale: none !important; }
 }
+/* Keep decorative arrows and symbols in text presentation on mobile */
+.page-labs .round-link__arrow,
+.page-labs .field-tab__mark,
+.page-labs .field-readout .text-link span,
+.page-labs .dossier-link span,
+.page-labs .method-card__symbol,
+.page-labs .method__asterisk,
+.page-labs .method-card__symbol,
+.page-labs .method__closing-mark {
+  font-variant-emoji: text;
+}

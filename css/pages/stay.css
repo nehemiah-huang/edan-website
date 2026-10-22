@@ -785,3 +785,13 @@
     transition: none;
   }
 }
+
+/* Keep Stay page arrows in a consistent text style */
+.page-stay .stay-button span,
+.page-stay .stay-text-link span,
+.page-stay .stay-room-card__arrow,
+.page-stay .stay-hero__scroll span:last-child {
+  font-family: Arial, sans-serif !important;
+  font-style: normal !important;
+  font-variant-emoji: text;
+}
