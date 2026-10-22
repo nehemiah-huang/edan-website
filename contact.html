@@ -1,178 +1,229 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — Ɛdan</title>
-<meta name="description" content="Get in touch with Ɛdan, a creative urban lab in Nyaniba Estates, Accra.">
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/tokens.css">
-<link rel="stylesheet" href="css/pages/contact.css">
-<link rel="stylesheet" href="css/footer.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300..600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Ɛdan</title>
+  <meta name="description" content="Get in touch with Ɛdan, a creative urban lab in Nyaniba Estates, Accra.">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/pages/contact.css">
+  <link rel="stylesheet" href="css/footer.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300..600&display=swap" rel="stylesheet">
 </head>
+
 <body class="page-contact">
 
-<!-- ============ NAV ============ -->
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="site-nav" id="siteNav">
-  <a href="index.html" class="nav-logo">
-    <span>Ɛdan</span>
-  </a>
-  <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
-    <span></span><span></span><span></span>
-  </button>
-  <nav class="nav-links" id="navLinks" aria-label="Main">
-    <a href="index.html#why">Why</a>
-    <a href="labs.html">Labs</a>
-    <a href="gather.html">Gather</a>
-    <a href="stay.html">Stay</a>
-    <a href="eat.html">Eat</a>
-    <a href="grow.html">Grow</a>
-    <a href="about.html">Who we are</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <p class="nav-note" aria-hidden="true">A space for<br>people &amp; ideas</p>
-</header>
+  <a class="skip-link" href="#main">Skip to content</a>
 
+  <header class="site-nav" id="siteNav">
+    <a href="index.html" class="nav-logo">
+      <span>Ɛdan</span>
+    </a>
 
-<main id="main">
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
 
-  <!-- CONTACT HERO -->
-  <section class="contact-hero" aria-labelledby="contact-title">
-    <div class="contact-hero__image">
-      <img
-        src="images/breeze-block-terracotta.jpg"
-        alt="A welcoming corner of Ɛdan's creative space"
-        fetchpriority="high"
-      >
-      <div class="contact-hero__veil"></div>
+    <nav class="nav-links" id="navLinks" aria-label="Main">
+      <a href="index.html#why">Why</a>
+      <a href="labs.html">Labs</a>
+      <a href="gather.html">Gather</a>
+      <a href="stay.html">Stay</a>
+      <a href="eat.html">Eat</a>
+      <a href="grow.html">Grow</a>
+      <a href="about.html">Who we are</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
 
-      <div class="contact-hero__topline">
-        <span>A SPACE FOR PEOPLE & IDEAS</span>
-        <span>NYANIBA ESTATES · ACCRA</span>
-      </div>
+    <p class="nav-note" aria-hidden="true">A space for<br>people &amp; ideas</p>
+  </header>
 
-      <div class="contact-hero__content">
-        <p class="contact-hero__eyebrow">CONTACT ƐDAN <span>— COME AS YOU ARE</span></p>
-        <h1 id="contact-title">
-          Every good thing<br>
-          <em>starts somewhere.</em>
-        </h1>
-        <p class="contact-hero__description">
-          A question, a collaboration, an idea still taking shape.
-          There's room for all of it here.
-        </p>
-        <a class="contact-hero__link" href="#contact-details">
-          <span>Let's start a conversation</span>
-          <span aria-hidden="true">↘</span>
-        </a>
-      </div>
+  <main id="main">
 
-      <div class="contact-hero__bottomline">
-        <span>01 / MAKE CONTACT</span>
-        <span>GOOD CONVERSATIONS BEGIN WITH A HELLO</span>
-      </div>
-    </div>
-  </section>
+    <!-- HERO -->
+    <section class="contact-hero" aria-labelledby="contact-title">
+      <div class="contact-hero__image">
+        <img
+          src="images/breeze-block-terracotta.jpg"
+          alt="A welcoming corner of Ɛdan's creative space"
+          fetchpriority="high"
+        >
 
-  <!-- CONTACT DETAILS -->
-  <section class="contact-main" id="contact-details">
-    <div class="contact-main__inner">
+        <div class="contact-hero__veil"></div>
 
-      <header class="contact-main__heading">
-        <p class="contact-label">THE DOOR IS OPEN</p>
-        <h2>What brings<br>you <em>our way?</em></h2>
-        <p class="contact-main__intro">
-          Ɛdan is a creative urban lab, a gathering place and a home
-          for ideas. Tell us what you're thinking about and we'll
-          find the right place to begin.
-        </p>
-      </header>
-
-      <div class="contact-options">
-
-        <article class="contact-option contact-option--email">
-          <div class="contact-option__top">
-            <span>01</span>
-            <span aria-hidden="true">↗</span>
-          </div>
-          <p class="contact-label">GENERAL ENQUIRIES</p>
-          <h3>Let's talk.</h3>
+        <div class="contact-hero__content">
+          <p class="contact-eyebrow">CONTACT ƐDAN</p>
+          <h1 id="contact-title">Let's talk.</h1>
           <p>
-            For collaborations, research, press, partnerships or
-            anything else you'd like to share with us.
+            Have a question, an idea, or want to work with us?
+            We'd love to hear from you.
           </p>
-          <a href="mailto:[PLACEHOLDER general email]"
-             class="contact-option__link">
-            [PLACEHOLDER general email] <span aria-hidden="true">↗</span>
+          <a class="contact-button contact-button--light" href="#contact-details">
+            Get in touch <span aria-hidden="true">↘</span>
           </a>
-        </article>
+        </div>
 
-        <article class="contact-option contact-option--visit">
-          <div class="contact-option__top">
-            <span>02</span>
-            <span aria-hidden="true">⌖</span>
-          </div>
-          <p class="contact-label">FIND YOUR WAY HERE</p>
-          <h3>Meet us in Accra.</h3>
-          <p>
-            Our home is in Nyaniba Estates. Get in touch before
-            visiting so we can help arrange your time with us.
-          </p>
-          <div class="contact-option__link contact-option__address">
-            Nyaniba Estates<br>Accra, Ghana
-          </div>
-        </article>
+        <div class="contact-hero__caption">
+          <span>A SPACE FOR PEOPLE &amp; IDEAS</span>
+          <span>NYANIBA ESTATES · ACCRA</span>
+        </div>
+      </div>
+    </section>
 
-        <article class="contact-option contact-option--follow">
-          <div class="contact-option__top">
-            <span>03</span>
-            <span aria-hidden="true">✳</span>
-          </div>
-          <p class="contact-label">STAY IN THE LOOP</p>
-          <h3>Follow the thread.</h3>
+    <!-- CONTACT DETAILS -->
+    <section class="contact-main" id="contact-details" aria-labelledby="contact-main-title">
+      <div class="contact-container">
+
+        <header class="contact-main__heading">
+          <p class="contact-eyebrow">WE'RE HERE TO HELP</p>
+          <h2 id="contact-main-title">Get in touch</h2>
           <p>
-            Follow the ideas, experiments, gatherings and stories
-            that continue to grow through Ɛdan.
+            Whether you're exploring a collaboration, planning a visit,
+            or simply have a question, here's where to start.
           </p>
-          <div class="contact-option__socials">
-            <a href="#" aria-label="Ɛdan on Instagram">
-              Instagram <span aria-hidden="true">↗</span>
+        </header>
+
+        <div class="contact-details">
+
+          <article class="contact-detail">
+            <span class="contact-detail__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                <path d="m4 7 8 6 8-6"></path>
+              </svg>
+            </span>
+
+            <h3>General enquiries</h3>
+            <p>
+              For questions, partnerships, press, research,
+              and collaboration opportunities.
+            </p>
+
+            <a class="contact-text-link" href="mailto:hello@yourdomain.com">
+              hello@yourdomain.com <span aria-hidden="true">↗</span>
             </a>
-            <a href="#" aria-label="Ɛdan on Substack">
-              Substack <span aria-hidden="true">↗</span>
+          </article>
+
+          <article class="contact-detail">
+            <span class="contact-detail__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="2.5"></circle>
+              </svg>
+            </span>
+
+            <h3>Visit Ɛdan</h3>
+            <p>
+              Find us in Nyaniba Estates, Accra.
+              Please get in touch before visiting so we can help arrange your time with us.
+            </p>
+
+            <p class="contact-address">
+              Nyaniba Estates<br>
+              Accra, Ghana
+            </p>
+          </article>
+
+        </div>
+
+        <!-- SOCIAL LINKS -->
+        <section class="contact-social" aria-labelledby="contact-social-title">
+          <p class="contact-eyebrow">STAY CONNECTED</p>
+          <h2 id="contact-social-title">Follow along</h2>
+          <p class="contact-social__intro">
+            Follow our projects, gatherings, and stories as they unfold.
+          </p>
+
+          <div class="contact-social__links">
+
+            <a class="contact-social__link"
+               href="https://www.instagram.com/YOUR_USERNAME/"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Ɛdan on Instagram"
+               title="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle class="icon-fill" cx="17.5" cy="6.5" r="1"></circle>
+              </svg>
             </a>
+
+            <a class="contact-social__link"
+               href="https://www.linkedin.com/company/YOUR_COMPANY/"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Ɛdan on LinkedIn"
+               title="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 9v10"></path>
+                <path d="M5 5.5v.1"></path>
+                <path d="M10 19v-6a4 4 0 0 1 8 0v6"></path>
+                <path d="M10 9v10"></path>
+              </svg>
+            </a>
+
+            <a class="contact-social__link"
+               href="https://www.youtube.com/@YOUR_CHANNEL"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Ɛdan on YouTube"
+               title="YouTube">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 7.5a2.8 2.8 0 0 0-2-2C17.3 5 12 5 12 5s-5.3 0-7 .5a2.8 2.8 0 0 0-2 2A29 29 0 0 0 2.7 12 29 29 0 0 0 3 16.5a2.8 2.8 0 0 0 2 2c1.7.5 7 .5 7 .5s5.3 0 7-.5a2.8 2.8 0 0 0 2-2 29 29 0 0 0 .3-4.5 29 29 0 0 0-.3-4.5Z"></path>
+                <path class="icon-fill" d="m10 9 5 3-5 3Z"></path>
+              </svg>
+            </a>
+
+            <a class="contact-social__link"
+               href="https://wa.me/233XXXXXXXXX"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Chat with Ɛdan on WhatsApp"
+               title="WhatsApp">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.5L3 20.5l1.4-4.7A8.5 8.5 0 1 1 20.5 11.7Z"></path>
+                <path d="M8.2 7.8c.2-.4.5-.4.8-.4h.5c.2 0 .4.1.5.4l.8 1.8c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.4 0 .7a7 7 0 0 0 2.8 2.5c.3.1.5.1.6-.1l.9-1.1c.2-.2.4-.3.7-.2l1.7.8c.3.1.4.3.4.5 0 .4-.2 1.2-.7 1.6-.5.5-1.2.7-2 .6-1.1-.2-2.4-.8-3.8-2-1.5-1.3-2.5-2.8-2.8-3.9-.3-1.1.1-1.9.5-2.5Z"></path>
+              </svg>
+            </a>
+
+            <a class="contact-social__link"
+               href="mailto:hello@yourdomain.com"
+               aria-label="Email Ɛdan"
+               title="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                <path d="m4 7 8 6 8-6"></path>
+              </svg>
+            </a>
+
           </div>
-        </article>
+        </section>
 
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CLOSING NOTE -->
-  <section class="contact-note">
-    <div class="contact-note__inner">
-      <span class="contact-note__mark" aria-hidden="true">Ɛ</span>
-      <p>
-        No finished plan needed.
-        <em>Some things begin with a conversation.</em>
-      </p>
-      <a href="#contact-details" aria-label="Return to contact details">↗</a>
-    </div>
-  </section>
+    <!-- CLOSING NOTE -->
+    <section class="contact-note">
+      <div class="contact-note__inner">
+        <span class="contact-note__mark" aria-hidden="true">Ɛ</span>
+        <p>No finished plan needed. <em>Just say hello.</em></p>
+      </div>
+    </section>
 
-</main>
+  </main>
 
+  <div data-include="partials/nav-footer.html"></div>
 
-<!-- ============ FOOTER ============ -->
-<div data-include="partials/nav-footer.html"></div>
-<script src="js/include.js"></script>
-
+  <script src="js/include.js"></script>
   <script src="js/main.js"></script>
   <script src="js/nav.js"></script>
-  <script src="js/eat.js" defer></script>
+
 </body>
 </html>
