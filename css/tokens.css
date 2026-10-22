@@ -112,3 +112,16 @@ body :is(
 body :is(.bts__note, .ci__lbl, .cr__note, .hb__note, .os__note, .ft__note, .ft__note *){
   font-family: 'Reenie Beanie', 'Bradley Hand', cursive !important;
 }
+
+/* Stay page — continuous cream background */
+body.page-stay {
+  --page-bg: var(--paper);
+  --page-accent: var(--paper);
+  background-color: var(--paper);
+  background-image: var(--paper-grain);
+}
+
+body.page-stay .section-cotton,
+body.page-stay .section-terracotta {
+  background: transparent;
+}

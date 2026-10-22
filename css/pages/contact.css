@@ -1,16 +1,539 @@
-/* ============================================
-   Contact: page-specific styles
-   ============================================ */
 
-.section.contact-section{
-  padding-top: clamp(9rem, 14vw, 12rem);
-  min-height: 70vh;
-}
-.wrap.wrap-narrow{ max-width: 40rem; }
+/* ==========================================
+   ƐDAN — CONTACT PAGE
+   Editorial invitation / warm paper palette
+   ========================================== */
 
-.contact-details{
-  margin-top: 2.5rem;
-  font-size: 1.05rem;
-  line-height: 2;
+.page-contact {
+  --contact-paper: #f3ecdf;
+  --contact-light: #faf6ed;
+  --contact-dark-paper: #e6dac6;
+  --contact-ink: #302e29;
+  --contact-muted: #82796a;
+  --contact-peach: #ddb29a;
+  --contact-sun: #e7d6a0;
+  --contact-line: rgba(48, 46, 41, 0.22);
+
+  background: var(--contact-paper);
+  color: var(--contact-ink);
 }
-.contact-details p + p{ margin-top: 1.5rem; }
+
+.page-contact main {
+  overflow: clip;
+}
+
+.page-contact a {
+  color: inherit;
+}
+
+/* ==========================================
+   HERO
+   ========================================== */
+
+.page-contact .contact-hero {
+  padding: 16px clamp(12px, 2vw, 30px) 0;
+  background: var(--contact-paper);
+}
+
+.page-contact .contact-hero__image {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  isolation: isolate;
+  min-height: min(780px, calc(100svh - 110px));
+  overflow: hidden;
+  background: #c8b8a1;
+  color: #fffaf1;
+}
+
+.page-contact .contact-hero__image > img {
+  position: absolute;
+  z-index: -3;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 55%;
+}
+
+.page-contact .contact-hero__veil {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(34, 30, 25, 0.62) 0%,
+      rgba(34, 30, 25, 0.35) 48%,
+      rgba(34, 30, 25, 0.05) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(34, 30, 25, 0.4) 0%,
+      transparent 30%
+    );
+}
+
+.page-contact .contact-hero__topline,
+.page-contact .contact-hero__bottomline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 26px clamp(22px, 4vw, 64px);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.page-contact .contact-hero__topline {
+  border-bottom: 1px solid rgba(255, 250, 241, 0.3);
+}
+
+.page-contact .contact-hero__content {
+  width: min(100%, 1500px);
+  margin: auto;
+  padding: clamp(65px, 9vw, 130px) clamp(22px, 7vw, 110px);
+}
+
+.page-contact .contact-hero__eyebrow {
+  margin: 0 0 24px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.page-contact .contact-hero__eyebrow span {
+  opacity: 0.7;
+}
+
+.page-contact .contact-hero h1 {
+  max-width: 1100px;
+  margin: 0;
+  font-size: clamp(58px, 9.2vw, 138px);
+  line-height: 0.91;
+  letter-spacing: -0.075em;
+  font-weight: 400;
+}
+
+.page-contact .contact-hero h1 em {
+  color: var(--contact-peach);
+  font-family: "Newsreader", Georgia, serif;
+  font-weight: 350;
+}
+
+.page-contact .contact-hero__description {
+  max-width: 430px;
+  margin: 32px 0 28px;
+  font-size: clamp(15px, 1.3vw, 18px);
+  line-height: 1.8;
+}
+
+.page-contact .contact-hero__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 38px;
+  padding: 0 0 12px;
+  border-bottom: 1px solid rgba(255, 250, 241, 0.7);
+  font-size: 13px;
+  text-decoration: none;
+  transition: gap 250ms ease;
+}
+
+.page-contact .contact-hero__link:hover {
+  gap: 52px;
+}
+
+.page-contact .contact-hero__link span:last-child {
+  font-size: 20px;
+}
+
+.page-contact .contact-hero__bottomline {
+  border-top: 1px solid rgba(255, 250, 241, 0.3);
+}
+
+/* ==========================================
+   CONTACT OPTIONS
+   ========================================== */
+
+.page-contact .contact-main {
+  padding: clamp(88px, 11vw, 160px) 0;
+  background: var(--contact-paper);
+}
+
+.page-contact .contact-main__inner {
+  width: calc(100% - clamp(36px, 7vw, 120px));
+  max-width: 1680px;
+  margin-inline: auto;
+}
+
+.page-contact .contact-main__heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(250px, 0.65fr);
+  column-gap: clamp(36px, 8vw, 140px);
+  align-items: end;
+  margin-bottom: clamp(48px, 7vw, 92px);
+}
+
+.page-contact .contact-label {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 10px;
+  line-height: 1.6;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--contact-muted);
+}
+
+.page-contact .contact-main__heading > .contact-label {
+  grid-column: 1 / -1;
+  padding-bottom: 20px;
+  margin: 0 0 28px;
+  border-bottom: 1px solid var(--contact-line);
+}
+
+.page-contact .contact-main__heading h2 {
+  margin: 0;
+  font-size: clamp(48px, 7vw, 96px);
+  font-weight: 400;
+  letter-spacing: -0.07em;
+  line-height: 0.98;
+}
+
+.page-contact .contact-main__heading h2 em {
+  color: #96664f;
+  font-family: "Newsreader", Georgia, serif;
+  font-weight: 350;
+}
+
+.page-contact .contact-main__intro {
+  max-width: 420px;
+  margin: 0 0 6px;
+  font-size: clamp(15px, 1.2vw, 18px);
+  line-height: 1.9;
+}
+
+/* Three editorial cards */
+
+.page-contact .contact-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--contact-line);
+  border-left: 1px solid var(--contact-line);
+}
+
+.page-contact .contact-option {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 400px;
+  padding: clamp(24px, 3vw, 48px);
+  border-right: 1px solid var(--contact-line);
+  border-bottom: 1px solid var(--contact-line);
+  background: var(--contact-light);
+  transition: background-color 250ms ease;
+}
+
+.page-contact .contact-option--visit {
+  background: #f0e4d6;
+}
+
+.page-contact .contact-option--follow {
+  background: #eee5d1;
+}
+
+.page-contact .contact-option:hover {
+  background: #fffaf1;
+}
+
+.page-contact .contact-option__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: clamp(45px, 6vw, 82px);
+}
+
+.page-contact .contact-option__top span:first-child {
+  color: var(--contact-muted);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+
+.page-contact .contact-option__top span:last-child {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid var(--contact-line);
+  border-radius: 50%;
+  font-size: 23px;
+  transition: transform 300ms ease;
+}
+
+.page-contact .contact-option:hover .contact-option__top span:last-child {
+  transform: rotate(45deg);
+}
+
+.page-contact .contact-option > .contact-label {
+  margin: 0 0 14px;
+}
+
+.page-contact .contact-option h3 {
+  margin: 0 0 18px;
+  font-size: clamp(26px, 2.8vw, 40px);
+  line-height: 1.1;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+}
+
+.page-contact .contact-option > p:not(.contact-label) {
+  max-width: 380px;
+  margin: 0 0 32px;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.page-contact .contact-option__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: auto;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--contact-line);
+  font-size: 13px;
+  line-height: 1.8;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.page-contact .contact-option__link span {
+  font-size: 18px;
+}
+
+.page-contact .contact-option__address {
+  display: block;
+}
+
+.page-contact .contact-option__socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: auto;
+}
+
+.page-contact .contact-option__socials a {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--contact-line);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.page-contact .contact-option__socials a span {
+  font-size: 17px;
+}
+
+/* ==========================================
+   CLOSING STATEMENT
+   ========================================== */
+
+.page-contact .contact-note {
+  padding: 0 clamp(18px, 4vw, 64px) clamp(70px, 9vw, 120px);
+  background: var(--contact-paper);
+}
+
+.page-contact .contact-note__inner {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr) 30px;
+  align-items: center;
+  gap: clamp(18px, 3vw, 42px);
+  max-width: 1680px;
+  margin-inline: auto;
+  padding: clamp(28px, 4vw, 54px) 0;
+  border-top: 1px solid var(--contact-line);
+  border-bottom: 1px solid var(--contact-line);
+}
+
+.page-contact .contact-note__mark {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border: 1px solid var(--contact-line);
+  border-radius: 50%;
+  color: #96664f;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 32px;
+}
+
+.page-contact .contact-note__inner p {
+  margin: 0;
+  font-size: clamp(19px, 2.8vw, 36px);
+  line-height: 1.5;
+  letter-spacing: -0.04em;
+}
+
+.page-contact .contact-note__inner p em {
+  color: #96664f;
+  font-family: "Newsreader", Georgia, serif;
+  font-weight: 350;
+}
+
+.page-contact .contact-note__inner > a {
+  font-size: 24px;
+  text-decoration: none;
+  transition: transform 250ms ease;
+}
+
+.page-contact .contact-note__inner > a:hover {
+  transform: translate(4px, -4px);
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (min-width: 1500px) {
+  .page-contact .contact-hero__image {
+    min-height: 780px;
+  }
+}
+
+@media (max-width: 900px) {
+  .page-contact .contact-main__heading {
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.7fr);
+    gap: 32px;
+  }
+
+  .page-contact .contact-options {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .page-contact .contact-option {
+    min-height: 360px;
+  }
+
+  .page-contact .contact-option:last-child {
+    grid-column: 1 / -1;
+    min-height: 310px;
+  }
+}
+
+@media (max-width: 620px) {
+  .page-contact .contact-hero {
+    padding: 8px 8px 0;
+  }
+
+  .page-contact .contact-hero__image {
+    min-height: 690px;
+    min-height: min(760px, calc(100svh - 90px));
+  }
+
+  .page-contact .contact-hero__veil {
+    background:
+      linear-gradient(
+        0deg,
+        rgba(34, 30, 25, 0.72) 0%,
+        rgba(34, 30, 25, 0.24) 75%,
+        rgba(34, 30, 25, 0.2) 100%
+      );
+  }
+
+  .page-contact .contact-hero__topline,
+  .page-contact .contact-hero__bottomline {
+    padding: 18px;
+    font-size: 8px;
+    letter-spacing: 0.08em;
+  }
+
+  .page-contact .contact-hero__content {
+    padding: 64px 22px;
+  }
+
+  .page-contact .contact-hero h1 {
+    font-size: clamp(51px, 12vw, 76px);
+  }
+
+  .page-contact .contact-hero__description {
+    max-width: 340px;
+    margin-top: 26px;
+    font-size: 15px;
+  }
+
+  .page-contact .contact-main {
+    padding: 78px 0;
+  }
+
+  .page-contact .contact-main__inner {
+    width: calc(100% - 36px);
+  }
+
+  .page-contact .contact-main__heading {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 42px;
+  }
+
+  .page-contact .contact-main__heading > .contact-label {
+    margin-bottom: 0;
+  }
+
+  .page-contact .contact-main__heading h2 {
+    font-size: clamp(48px, 12vw, 72px);
+  }
+
+  .page-contact .contact-main__intro {
+    max-width: 440px;
+  }
+
+  .page-contact .contact-options {
+    grid-template-columns: 1fr;
+  }
+
+  .page-contact .contact-option,
+  .page-contact .contact-option:last-child {
+    grid-column: auto;
+    min-height: 340px;
+    padding: 26px;
+  }
+
+  .page-contact .contact-option__top {
+    margin-bottom: 48px;
+  }
+
+  .page-contact .contact-note {
+    padding: 0 18px 64px;
+  }
+
+  .page-contact .contact-note__inner {
+    grid-template-columns: 42px minmax(0, 1fr) 20px;
+    gap: 14px;
+  }
+
+  .page-contact .contact-note__mark {
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+  }
+
+  .page-contact .contact-note__inner p {
+    font-size: 19px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-contact .contact-hero__link,
+  .page-contact .contact-option,
+  .page-contact .contact-option__top span:last-child,
+  .page-contact .contact-note__inner > a {
+    transition: none;
+  }
+}
