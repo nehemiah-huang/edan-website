@@ -14,7 +14,7 @@
 
   position:relative;
   overflow-x:clip;                      /* stops the ground overshoot causing sideways scroll */
-  padding-top:clamp(3.5rem,7vw,6rem);   /* open paper space above the skyline */
+  /* padding-top:clamp(3.5rem,7vw,6rem);   open paper space above the skyline */
   background:transparent;               /* page paper shows through the sky */
 }
 

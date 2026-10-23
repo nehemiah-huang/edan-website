@@ -1,4 +1,3 @@
-
 /* ============================================
    Ɛdan — Stay page
    Editorial hospitality / architectural imagery
@@ -142,15 +141,6 @@
     border-color 0.3s var(--ease);
 }
 
-.stay-button span {
-  font-size: 1rem;
-  transition: transform 0.3s var(--ease);
-}
-
-.stay-button:hover span {
-  transform: translate(3px, -3px);
-}
-
 .stay-button--light {
   margin-top: 2rem;
   color: var(--ink);
@@ -195,19 +185,9 @@
   letter-spacing: 0.04em;
 }
 
-.stay-hero__scroll span:last-child {
-  font-size: 1rem;
-  animation: stay-scroll 1.8s ease-in-out infinite;
-}
-
 @keyframes stay-hero-arrive {
   from { transform: scale(1.045); }
   to { transform: scale(1); }
-}
-
-@keyframes stay-scroll {
-  0%, 100% { transform: translateY(-2px); }
-  50% { transform: translateY(4px); }
 }
 
 /* ============================================
@@ -215,14 +195,23 @@
    ============================================ */
 
 .stay-intro {
-  padding-block: clamp(5rem, 10vw, 9rem);
+  padding-block: clamp(3.5rem, 6vw, 6rem);
   background: var(--paper);
+}
+
+/* Wider content area: side whitespace capped at ~7% per side */
+.page-stay .stay-intro .wrap,
+.page-stay .stay-rooms .wrap {
+  width: 100%;
+  max-width: none;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 7vw, 9rem);
 }
 
 .stay-intro__grid {
   display: grid;
-  grid-template-columns: 0.7fr 1fr 0.9fr;
-  gap: clamp(2rem, 5vw, 5rem);
+  grid-template-columns: 0.45fr 1fr 1.05fr;
+  gap: clamp(2rem, 4vw, 4.5rem);
   align-items: start;
 }
 
@@ -243,7 +232,7 @@
 }
 
 .stay-intro__copy h2 {
-  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-size: clamp(2.8rem, 6vw, 6.5rem);
   line-height: 1;
   letter-spacing: -0.055em;
   font-weight: 400;
@@ -254,9 +243,9 @@
 }
 
 .stay-intro__copy > p {
-  max-width: 39ch;
+  max-width: 46ch;
   margin-top: 1.6rem;
-  font-size: 0.98rem;
+  font-size: clamp(1rem, 1.1vw, 1.15rem);
   line-height: 1.85;
   color: var(--ink-soft);
 }
@@ -275,17 +264,9 @@
   text-decoration: none;
 }
 
-.stay-text-link span {
-  transition: transform 0.3s var(--ease);
-}
-
-.stay-text-link:hover span {
-  transform: translate(3px, -3px);
-}
-
 .stay-intro__image {
   margin: 0;
-  padding-top: 2rem;
+  padding-top: 0;
 }
 
 .stay-intro__image img {
@@ -307,7 +288,7 @@
 
 .stay-rooms {
   display: block;
-  padding-block: clamp(5rem, 9vw, 8rem);
+  padding-block: clamp(3.5rem, 6vw, 6rem);
   background: var(--paper);
 }
 
@@ -390,28 +371,6 @@
   font-size: 0.68rem;
 }
 
-.stay-room-card__arrow {
-  position: absolute;
-  right: 1rem;
-  bottom: 1rem;
-  display: grid;
-  place-items: center;
-  width: 2.8rem;
-  height: 2.8rem;
-  border-radius: 50%;
-  background: var(--cream);
-  color: var(--ink);
-  font-size: 1.1rem;
-  transition:
-    background 0.3s var(--ease),
-    color 0.3s var(--ease);
-}
-
-.stay-room-card__image:hover .stay-room-card__arrow {
-  background: var(--ink);
-  color: var(--cream);
-}
-
 .stay-room-card__details {
   padding-top: 1.35rem;
 }
@@ -450,14 +409,24 @@
 }
 
 .stay-room-note {
-  max-width: 75ch;
-  margin-top: 3rem;
-  padding-top: 1.2rem;
+  width: 100%;
+  max-width: none;
+  margin-top: 3.5rem;
+  padding-top: 2rem;
   border-top: 1px solid var(--stay-line);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.5rem, 5vw, 6rem);
+  text-align: center;
   font-family: var(--font-mono);
-  font-size: 0.65rem;
-  line-height: 1.8;
-  opacity: 0.72;
+  font-size: clamp(0.78rem, 0.95vw, 0.95rem);
+  line-height: 1.9;
+  opacity: 0.85;
+}
+
+.stay-room-note p {
+  max-width: 52ch;
+  margin: 0 auto;
 }
 
 /* ============================================
@@ -714,6 +683,11 @@
     margin-top: 0;
   }
 
+  .stay-room-note {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
   .stay-room-card__image {
     aspect-ratio: 5 / 4;
   }
@@ -774,24 +748,8 @@
     animation: none;
   }
 
-  .stay-hero__scroll span:last-child {
-    animation: none;
-  }
-
   .stay-room-card__image img,
-  .stay-button,
-  .stay-button span,
-  .stay-text-link span {
+  .stay-button {
     transition: none;
   }
-}
-
-/* Keep Stay page arrows in a consistent text style */
-.page-stay .stay-button span,
-.page-stay .stay-text-link span,
-.page-stay .stay-room-card__arrow,
-.page-stay .stay-hero__scroll span:last-child {
-  font-family: Arial, sans-serif !important;
-  font-style: normal !important;
-  font-variant-emoji: text;
 }
