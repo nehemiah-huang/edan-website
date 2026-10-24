@@ -314,9 +314,9 @@
 }
 
 .stay-section-heading > p {
-  max-width: 38ch;
+  max-width: 68ch;
   margin: 0;
-  font-size: 0.98rem;
+  font-size: clamp(1rem, 1.1vw, 1.15rem);
   line-height: 1.8;
   color: var(--ink-soft);
 }
@@ -664,10 +664,11 @@
     font-size: clamp(2.8rem, 11vw, 4.5rem);
   }
 
-  .stay-intro__image {
+    .stay-intro__image {
     grid-column: auto;
-    width: 86%;
-    margin-left: auto;
+    width: 100%;
+    max-width: none;
+    margin-inline: auto;
   }
 
   .stay-section-heading h2 {
