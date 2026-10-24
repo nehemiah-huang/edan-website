@@ -132,6 +132,212 @@
 
         </div>
 
+        
+<!-- EVENT ENQUIRY -->
+<section class="event-enquiry" id="event-enquiry" aria-labelledby="event-enquiry-title">
+  <div class="event-enquiry__inner">
+
+    <header class="event-enquiry__intro">
+      <p class="event-enquiry__eyebrow">ƐDAN / GATHERINGS</p>
+      <h2 id="event-enquiry-title">Bring an idea<br><em>into the space.</em></h2>
+      <p>
+        A gathering, a conversation, a listening session.
+        Tell us what you're imagining, and we'll explore whether
+        Ɛdan is the right place for it.
+      </p>
+      <span class="event-enquiry__note">EVENT ENQUIRY · ACCRA, GHANA</span>
+    </header>
+
+    <form
+      class="event-form"
+      id="eventEnquiryForm"
+      action="https://formsubmit.co/nhuang934@gmail.com"
+      method="POST"
+    >
+      <input type="hidden" name="_subject" value="New Event Enquiry | Ɛdan">
+      <!-- <input type="hidden" name="_cc" value="YOUR_SECOND_EMAIL,YOUR_CC_EMAIL"> -->
+      <input type="hidden" name="_template" value="basic">
+      <input type="hidden" name="_captcha" value="true">
+
+      <div class="event-form__heading">
+        <span>01</span>
+        <h3>About you</h3>
+      </div>
+
+      <div class="event-form__grid">
+        <div class="event-field">
+          <label for="event-name">Full name <span>*</span></label>
+          <input id="event-name" name="Full name" type="text"
+            autocomplete="name" placeholder="Your name" required>
+        </div>
+
+        <div class="event-field">
+          <label for="event-email">Email address <span>*</span></label>
+          <input id="event-email" name="Email" type="email"
+            autocomplete="email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="event-field">
+          <label for="event-phone">Phone or WhatsApp</label>
+          <input id="event-phone" name="Phone or WhatsApp" type="tel"
+            autocomplete="tel" placeholder="Your contact number">
+        </div>
+
+        <fieldset class="event-field event-field--full">
+          <legend>Are you part of Ɛdan? <span>*</span></legend>
+          <div class="event-choice">
+            <label class="event-choice__option">
+              <input type="radio" name="Enquirer type" value="Member" required>
+              <span>Member</span>
+            </label>
+            <label class="event-choice__option">
+              <input type="radio" name="Enquirer type" value="External">
+              <span>External</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="event-field event-member-fields" hidden>
+          <label for="event-membership">Membership name or number</label>
+          <input id="event-membership" name="Membership details" type="text"
+            placeholder="Membership details">
+        </div>
+
+        <div class="event-field event-external-fields" hidden>
+          <label for="event-organisation">Organisation or collective</label>
+          <input id="event-organisation" name="Organisation or collective" type="text"
+            placeholder="Organisation name">
+        </div>
+      </div>
+
+      <div class="event-form__heading">
+        <span>02</span>
+        <h3>Your event</h3>
+      </div>
+
+      <div class="event-form__grid">
+        <div class="event-field event-field--full">
+          <label for="event-type">What kind of gathering are you planning? <span>*</span></label>
+          <select id="event-type" name="Event type" required>
+            <option value="">Choose an event type</option>
+            <option>Showcase or exhibition</option>
+            <option>Meeting or gathering</option>
+            <option>Listening session</option>
+            <option>Public talk or conversation</option>
+            <option>Launch</option>
+            <option>Workshop</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="event-field event-field--full">
+          <label for="event-title">Working title</label>
+          <input id="event-title" name="Working title" type="text"
+            placeholder="A name for your event, if you have one">
+        </div>
+
+        <div class="event-field event-field--full">
+          <label for="event-description">Tell us about your idea <span>*</span></label>
+          <textarea id="event-description" name="Event description" rows="5"
+            placeholder="What would happen at your event? Who is it for?" required></textarea>
+        </div>
+
+        <fieldset class="event-field event-field--full">
+          <legend>How will people attend? <span>*</span></legend>
+          <div class="event-choice event-choice--wrap">
+            <label class="event-choice__option">
+              <input type="radio" name="Attendance format" value="Public" required>
+              <span>Public</span>
+            </label>
+            <label class="event-choice__option">
+              <input type="radio" name="Attendance format" value="Invitation-only">
+              <span>Invitation-only</span>
+            </label>
+            <label class="event-choice__option">
+              <input type="radio" name="Attendance format" value="Ticketed">
+              <span>Ticketed</span>
+            </label>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="event-form__heading">
+        <span>03</span>
+        <h3>Dates and details</h3>
+      </div>
+
+      <div class="event-form__grid">
+        <div class="event-field">
+          <label for="event-date">Preferred date <span>*</span></label>
+          <input id="event-date" name="Preferred date" type="date" required>
+        </div>
+
+        <div class="event-field">
+          <label for="event-alt-date">Alternative date</label>
+          <input id="event-alt-date" name="Alternative date" type="date">
+        </div>
+
+        <div class="event-field">
+          <label for="event-start">Start time <span>*</span></label>
+          <input id="event-start" name="Start time" type="time" required>
+        </div>
+
+        <div class="event-field">
+          <label for="event-end">Finish time <span>*</span></label>
+          <input id="event-end" name="Finish time" type="time" required>
+        </div>
+
+        <div class="event-field">
+          <label for="event-guests">Expected guests <span>*</span></label>
+          <input id="event-guests" name="Expected guests" type="number"
+            min="1" step="1" placeholder="Number of people" required>
+        </div>
+
+        <div class="event-field">
+          <label for="event-setup">Setup time, if needed</label>
+          <input id="event-setup" name="Setup time" type="text"
+            placeholder="e.g. 1 hour before">
+        </div>
+
+        <fieldset class="event-field event-field--full">
+          <legend>What will you need?</legend>
+          <div class="event-needs">
+            <label><input type="checkbox" name="Requirements" value="Sound system or microphones"> Sound system or microphones</label>
+            <label><input type="checkbox" name="Requirements" value="Projector and screen"> Projector and screen</label>
+            <label><input type="checkbox" name="Requirements" value="Seating"> Seating</label>
+            <label><input type="checkbox" name="Requirements" value="Café or catering"> Café or catering</label>
+            <label><input type="checkbox" name="Requirements" value="Photography or filming"> Photography or filming</label>
+          </div>
+        </fieldset>
+
+        <div class="event-field event-field--full">
+          <label for="event-extra">Anything else we should know?</label>
+          <textarea id="event-extra" name="Additional requirements" rows="3"
+            placeholder="Accessibility, setup, or other details"></textarea>
+        </div>
+      </div>
+
+      <div class="event-form__submit">
+        <p>
+          Submitting an enquiry doesn't confirm your date or book the space.
+          Our team will review your proposal and get in touch.
+        </p>
+        <button type="submit" class="event-submit" id="eventSubmit">
+          <span>Send event enquiry</span>
+          <span aria-hidden="true">+</span>
+        </button>
+        <p class="event-form__status" id="eventFormStatus" role="status" aria-live="polite"></p>
+      </div>
+
+      <div class="event-form__honeypot" aria-hidden="true">
+        <label for="event-website">Leave this field empty</label>
+        <input id="event-website" type="text" name="_honey" tabindex="-1" autocomplete="off">
+      </div>
+    </form>
+  </div>
+</section>
+<!-- END EVENT ENQUIRY -->
+
         <!-- SOCIAL LINKS -->
         <section class="contact-social" aria-labelledby="contact-social-title">
           <p class="contact-eyebrow">STAY CONNECTED</p>

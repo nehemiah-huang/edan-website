@@ -1,0 +1,385 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Ɛdan Event Enquiries</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap">
+<style>
+/* Layout: a single form column beside a quiet left rail of house details; stacks on phones. Owner inbox below the form. */
+:root {
+  --bg: #F2F3EE;
+  --surface: #FFFFFF;
+  --ink: #17201B;
+  --muted: #5B6660;
+  --line: #D5DAD3;
+  --gate: #1E5A3E;
+  --gate-ink: #FFFFFF;
+  --gate-soft: #E2ECE5;
+  --error: #A3321F;
+  --display: "Bricolage Grotesque", "Work Sans", system-ui, sans-serif;
+  --body: "Work Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "Space Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #101512; --surface: #171E1A; --ink: #E7ECE8; --muted: #9AA69F; --line: #2B3530;
+    --gate: #6FBF92; --gate-ink: #0E1A13; --gate-soft: #1D2F25; --error: #F08A73; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #101512; --surface: #171E1A; --ink: #E7ECE8; --muted: #9AA69F; --line: #2B3530;
+  --gate: #6FBF92; --gate-ink: #0E1A13; --gate-soft: #1D2F25; --error: #F08A73; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.5; }
+.wrap {
+  max-width: 1040px; margin: 0 auto;
+  padding-block: 40px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 48px;
+}
+@media (max-width: 760px) { .wrap { grid-template-columns: 1fr; gap: 28px; padding-block: 24px 48px; } }
+
+.rail { display: flex; flex-direction: column; gap: 24px; }
+.mark { font-family: var(--mono); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(32px, 5vw, 44px); line-height: 1.05; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+.lede { color: var(--muted); margin: 0; max-width: 34ch; }
+.where { font-family: var(--mono); font-size: 13px; line-height: 1.6; border-top: 1px solid var(--line); padding-top: 16px; color: var(--muted); }
+.where strong { color: var(--ink); font-weight: 700; display: block; margin-bottom: 4px; }
+
+form { display: flex; flex-direction: column; gap: 32px; min-width: 0; }
+fieldset { border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+legend { font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--gate); padding: 0 0 12px; border-bottom: 1px solid var(--line); width: 100%; margin-bottom: 4px; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 560px) { .row { grid-template-columns: 1fr; } }
+.field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+label, .label { font-weight: 600; font-size: 14px; }
+.hint { font-size: 13px; color: var(--muted); font-weight: 400; }
+.opt { font-weight: 400; color: var(--muted); font-size: 13px; }
+input[type=text], input[type=email], input[type=tel], input[type=date], input[type=time], input[type=number], select, textarea {
+  font: inherit; color: var(--ink); background: var(--surface);
+  border: 1px solid var(--line); border-radius: 4px; padding: 11px 12px; width: 100%;
+}
+textarea { min-height: 120px; resize: vertical; }
+select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+  background-position: calc(100% - 18px) 50%, calc(100% - 13px) 50%; background-size: 5px 5px; background-repeat: no-repeat; padding-right: 36px; }
+input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible, .seg input:focus-visible + span {
+  outline: 2px solid var(--gate); outline-offset: 2px;
+}
+[aria-invalid="true"] { border-color: var(--error) !important; }
+.err { color: var(--error); font-size: 13px; }
+
+/* Member / external switch */
+.seg { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; background: var(--surface); }
+.seg label { position: relative; cursor: pointer; }
+.seg input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.seg span { display: flex; flex-direction: column; gap: 2px; padding: 14px 16px; height: 100%; }
+.seg span b { font-family: var(--display); font-weight: 700; font-size: 18px; }
+.seg span i { font-style: normal; font-weight: 400; font-size: 13px; color: var(--muted); }
+.seg label + label span { border-left: 1px solid var(--line); }
+.seg input:checked + span { background: var(--gate); color: var(--gate-ink); }
+.seg input:checked + span i { color: var(--gate-ink); opacity: .85; }
+
+.checks { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 8px 16px; }
+.checks label { font-weight: 400; display: flex; gap: 10px; align-items: center; }
+.checks input { accent-color: var(--gate); width: 18px; height: 18px; }
+
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+button { font: inherit; cursor: pointer; border-radius: 4px; }
+.primary { background: var(--gate); color: var(--gate-ink); border: 0; padding: 13px 24px; font-weight: 600; }
+.primary[disabled] { opacity: .55; cursor: not-allowed; }
+.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); padding: 10px 16px; font-size: 14px; }
+.status { font-size: 14px; color: var(--muted); }
+.notice { background: var(--gate-soft); border-radius: 6px; padding: 16px 18px; font-size: 14px; }
+.notice b { display: block; font-family: var(--display); font-size: 18px; margin-bottom: 4px; }
+
+/* Owner inbox */
+.inbox { grid-column: 1 / -1; border-top: 1px solid var(--line); padding-top: 32px; display: flex; flex-direction: column; gap: 16px; }
+.inbox h2 { font-family: var(--display); font-size: 26px; margin: 0; }
+.inbox-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { border: 1px solid var(--line); background: var(--surface); color: var(--ink); padding: 6px 12px; border-radius: 999px; font-size: 13px; }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.list { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); overflow: hidden; }
+.item { display: grid; grid-template-columns: 110px minmax(0,1fr) auto; gap: 16px; padding: 14px 16px; border-top: 1px solid var(--line); align-items: start; }
+.item:first-child { border-top: 0; }
+@media (max-width: 560px) { .item { grid-template-columns: 1fr; gap: 6px; } }
+.date { font-family: var(--mono); font-size: 13px; font-variant-numeric: tabular-nums; color: var(--muted); }
+.item h3 { margin: 0 0 2px; font-size: 16px; }
+.item p { margin: 0; font-size: 14px; color: var(--muted); overflow-wrap: anywhere; }
+.tag { font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; padding: 3px 8px; border-radius: 3px; white-space: nowrap; }
+.tag.member { background: var(--gate); color: var(--gate-ink); }
+.tag.external { border: 1px solid var(--ink); }
+.empty { padding: 24px 16px; color: var(--muted); font-size: 14px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <aside class="rail">
+    <div class="mark">Ɛdan · Events</div>
+    <h1>Host an event at Ɛdan</h1>
+    <p class="lede">Tell us what you would like to hold and when. The events team replies to every enquiry.</p>
+    <div class="where">
+      <strong>Ɛdan</strong>
+      7 Nii Nahr Street<br>
+      Nyaniba Estate, Osu, Accra<br>
+      Behind the double green gates
+    </div>
+  </aside>
+
+  <main style="min-width:0">
+    <div id="sent" class="notice" hidden>
+      <b>Enquiry received</b>
+      <span id="sentText">Thank you. The events team will be in touch.</span>
+      <div style="margin-top:12px"><button type="button" class="ghost" id="another">Send another enquiry</button></div>
+    </div>
+
+    <form id="form" novalidate>
+      <fieldset>
+        <legend>Who is enquiring</legend>
+        <div class="seg" role="radiogroup" aria-label="Member or external enquiry">
+          <label><input type="radio" name="who" id="who-member" value="member" checked><span><b>Member</b><i>You hold an Ɛdan membership</i></span></label>
+          <label><input type="radio" name="who" id="who-external" value="external"><span><b>External enquiry</b><i>Organisation, collective or individual</i></span></label>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" autocomplete="name" required>
+          </div>
+          <div class="field" id="memberField">
+            <label for="memberRef">Membership name or number <span class="opt">optional</span></label>
+            <input type="text" id="memberRef">
+          </div>
+          <div class="field" id="orgField" hidden>
+            <label for="org">Organisation or collective <span class="opt">optional</span></label>
+            <input type="text" id="org" autocomplete="organization">
+          </div>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone or WhatsApp <span class="opt">optional</span></label>
+            <input type="tel" id="phone" autocomplete="tel" placeholder="+233">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>The event</legend>
+        <div class="row">
+          <div class="field">
+            <label for="type">Type of event</label>
+            <select id="type" required>
+              <option value="">Choose a type</option>
+              <option>Showcase</option>
+              <option>Meeting</option>
+              <option>Listening session</option>
+              <option>Public talk, conversation or launch</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="title">Working title <span class="opt">optional</span></label>
+            <input type="text" id="title">
+          </div>
+        </div>
+        <div class="field">
+          <label for="desc">What are you planning?</label>
+          <span class="hint">The format, who it is for, and anything we should know about the programme.</span>
+          <textarea id="desc" required></textarea>
+        </div>
+        <div class="field">
+          <span class="label">Access</span>
+          <div class="checks">
+            <label><input type="radio" name="access" id="acc-public" value="Open to the public" checked> Open to the public</label>
+            <label><input type="radio" name="access" id="acc-invite" value="Invitation only"> Invitation only</label>
+            <label><input type="radio" name="access" id="acc-ticket" value="Ticketed"> Ticketed</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Date and numbers</legend>
+        <div class="row">
+          <div class="field">
+            <label for="date">Preferred date</label>
+            <input type="date" id="date" required>
+          </div>
+          <div class="field">
+            <label for="altDate">Alternative date <span class="opt">optional</span></label>
+            <input type="date" id="altDate">
+          </div>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="start">Start time</label>
+            <input type="time" id="start" required>
+          </div>
+          <div class="field">
+            <label for="end">Finish time</label>
+            <input type="time" id="end" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="guests">Expected guests</label>
+            <input type="number" id="guests" min="1" inputmode="numeric" required>
+          </div>
+          <div class="field">
+            <label for="setup">Set up needed from <span class="opt">optional</span></label>
+            <input type="time" id="setup">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>What you need</legend>
+        <div class="checks" id="needs">
+          <label><input type="checkbox" id="n-sound" value="Sound system"> Sound system</label>
+          <label><input type="checkbox" id="n-mics" value="Microphones"> Microphones</label>
+          <label><input type="checkbox" id="n-proj" value="Projector and screen"> Projector and screen</label>
+          <label><input type="checkbox" id="n-seat" value="Seating"> Seating</label>
+          <label><input type="checkbox" id="n-cafe" value="Café and catering"> Café and catering</label>
+          <label><input type="checkbox" id="n-film" value="Photography or film"> Photography or film</label>
+        </div>
+        <div class="field">
+          <label for="notes">Anything else <span class="opt">optional</span></label>
+          <textarea id="notes" style="min-height:80px"></textarea>
+        </div>
+      </fieldset>
+
+      <div class="actions">
+        <button type="submit" class="primary" id="submit">Send enquiry</button>
+        <span class="status" id="status" role="status"></span>
+      </div>
+    </form>
+  </main>
+
+  <section class="inbox" id="inbox" hidden>
+    <div class="inbox-head">
+      <h2>Enquiries received</h2>
+      <div class="filters" id="filters">
+        <button type="button" class="chip" data-f="all" aria-pressed="true">All</button>
+        <button type="button" class="chip" data-f="member" aria-pressed="false">Members</button>
+        <button type="button" class="chip" data-f="external" aria-pressed="false">External</button>
+      </div>
+    </div>
+    <div class="list" id="list"><div class="empty">No enquiries yet. New submissions appear here as they arrive.</div></div>
+  </section>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const form = $("form");
+let db = null, uid = null;
+
+function syncWho() {
+  const member = $("who-member").checked;
+  $("memberField").hidden = !member;
+  $("orgField").hidden = member;
+}
+document.querySelectorAll('input[name="who"]').forEach(r => r.addEventListener("change", syncWho));
+syncWho();
+
+function val(id) { return $(id).value.trim(); }
+function validate() {
+  let ok = true;
+  form.querySelectorAll("[required]").forEach(el => {
+    let bad = !el.value.trim();
+    if (el.type === "email" && !bad) bad = !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim());
+    el.setAttribute("aria-invalid", bad ? "true" : "false");
+    if (bad && ok) { el.focus(); ok = false; }
+  });
+  return ok;
+}
+form.addEventListener("input", (e) => { if (e.target.getAttribute("aria-invalid") === "true" && e.target.value.trim()) e.target.setAttribute("aria-invalid", "false"); });
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  if (!validate()) { $("status").textContent = "Please complete the highlighted fields."; return; }
+  if (!db || !uid) { $("status").textContent = "Enquiries can only be sent by people signed in to Claude with access to this page."; return; }
+  const who = document.querySelector('input[name="who"]:checked').value;
+  const entry = {
+    at: new Date().toISOString(),
+    who, name: val("name"),
+    memberRef: who === "member" ? val("memberRef") : "",
+    org: who === "external" ? val("org") : "",
+    email: val("email"), phone: val("phone"),
+    type: $("type").value, title: val("title"), description: val("desc"),
+    access: document.querySelector('input[name="access"]:checked').value,
+    date: val("date"), altDate: val("altDate"), start: val("start"), end: val("end"),
+    guests: Number(val("guests")) || null, setup: val("setup"),
+    needs: [...document.querySelectorAll('#needs input:checked')].map(c => c.value),
+    notes: val("notes")
+  };
+  $("submit").disabled = true; $("status").textContent = "Sending";
+  try {
+    const ref = db.doc("enquiries/" + uid);
+    const snap = await ref.get();
+    const prev = (snap.exists && snap.data() && Array.isArray(snap.data().submissions)) ? snap.data().submissions : [];
+    await ref.set({ submissions: prev.concat([entry]), last: entry.at });
+    form.hidden = true; $("sent").hidden = false;
+    $("sentText").textContent = "Thank you, " + entry.name.split(" ")[0] + ". Your enquiry (" + entry.type.toLowerCase() + ") for " + fmtDate(entry.date) + " has reached the events team.";
+    $("status").textContent = "";
+  } catch (err) {
+    $("status").textContent = "Your enquiry did not send. Check your connection and try again.";
+  } finally { $("submit").disabled = false; }
+});
+$("another").addEventListener("click", () => { form.reset(); syncWho(); $("sent").hidden = true; form.hidden = false; $("name").focus(); });
+
+function fmtDate(d) {
+  if (!d) return "";
+  const t = new Date(d + "T12:00:00");
+  return isNaN(t) ? d : t.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+}
+
+/* Owner inbox */
+let all = [], filter = "all";
+function renderInbox() {
+  const list = $("list"); list.textContent = "";
+  const rows = all.filter(r => filter === "all" || r.who === filter).sort((a, b) => (b.at || "").localeCompare(a.at || ""));
+  if (!rows.length) { const d = document.createElement("div"); d.className = "empty"; d.textContent = all.length ? "Nothing in this view." : "No enquiries yet. New submissions appear here as they arrive."; list.append(d); return; }
+  for (const r of rows) {
+    const item = document.createElement("div"); item.className = "item";
+    const date = document.createElement("div"); date.className = "date"; date.textContent = fmtDate(r.date) + (r.start ? "\n" + r.start + (r.end ? " to " + r.end : "") : "");
+    date.style.whiteSpace = "pre-line";
+    const body = document.createElement("div");
+    const h = document.createElement("h3"); h.textContent = (r.type || "Event") + (r.title ? ": " + r.title : "");
+    const p1 = document.createElement("p"); p1.textContent = [r.name, r.org || r.memberRef, r.email, r.phone].filter(Boolean).join(" · ");
+    const p2 = document.createElement("p"); p2.textContent = [r.guests ? r.guests + " guests" : "", r.access, (r.needs || []).join(", ")].filter(Boolean).join(" · ");
+    const p3 = document.createElement("p"); p3.textContent = r.description || ""; p3.style.color = "var(--ink)"; p3.style.marginTop = "6px";
+    body.append(h, p1, p2, p3);
+    if (r.notes) { const p4 = document.createElement("p"); p4.textContent = "Notes: " + r.notes; body.append(p4); }
+    const tag = document.createElement("span"); tag.className = "tag " + r.who; tag.textContent = r.who === "member" ? "Member" : "External";
+    item.append(date, body, tag); list.append(item);
+  }
+}
+$("filters").addEventListener("click", (e) => {
+  const b = e.target.closest(".chip"); if (!b) return;
+  filter = b.dataset.f;
+  document.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", c === b ? "true" : "false"));
+  renderInbox();
+});
+
+(async () => {
+  try {
+    if (!window.claude || !window.claude.use) return;
+    const [d, user] = await Promise.all([claude.use("db"), claude.use("user")]);
+    db = d;
+    if (user) { try { uid = await user.id(); } catch (_) {} }
+    const isOwner = user ? await user.isOwner() : false;
+    const canAdmin = user ? await user.canEdit() : false;
+    if (db && (isOwner || canAdmin)) {
+      $("inbox").hidden = false;
+      db.collection("enquiries").onSnapshot((snap) => {
+        all = [];
+        for (const doc of snap.docs) { const s = doc.data(); if (s && Array.isArray(s.submissions)) all.push(...s.submissions); }
+        renderInbox();
+      }, () => {});
+    }
+  } catch (_) {}
+})();
+</script>
+
+</body></html>
