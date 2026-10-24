@@ -294,7 +294,7 @@
 
 .os__closing {
   width: min(800px, 100%);
-  margin: clamp(100px, 15vw, 190px) auto 0;
+  margin: clamp(10px, 5vw, 19px) auto 0;
   padding: clamp(28px, 5vw, 60px) 0 0;
   text-align: center;
 }

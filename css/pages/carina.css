@@ -1,4 +1,3 @@
-
 /* ƐDAN | CARINA
    Editorial portrait and biography
 */
@@ -44,15 +43,6 @@
 .carina__content {
   max-width: 520px;
   padding-block: 2rem;
-}
-
-.carina__eyebrow {
-  margin: 0 0 clamp(2rem, 5vw, 4rem);
-  font-family: "Space Mono", monospace;
-  font-size: 0.68rem;
-  letter-spacing: 0.06em;
-  line-height: 1.5;
-  text-transform: uppercase;
 }
 
 .carina__name {
@@ -132,10 +122,6 @@
     padding-block: 0.5rem;
   }
 
-  .carina__eyebrow {
-    margin-bottom: 1.5rem;
-  }
-
   .carina__name {
     font-size: clamp(3.2rem, 12vw, 5rem);
     margin-bottom: 1.5rem;
@@ -162,12 +148,6 @@
 }
 
 /* Shared typography scale — Carina and Hiba */
-
-.carina__eyebrow,
-.hiba__eyebrow {
-  font-size: 0.68rem;
-  line-height: 1.5;
-}
 
 .carina__name,
 .hiba__title {
@@ -196,21 +176,4 @@
     font-size: 1rem;
     line-height: 1.7;
   }
-}
-
-.carina__inner {
-  position: relative;
-  padding-top: 3.5rem;
-}
-
-.carina__eyebrow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  margin: 0;
-  text-align: center;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  letter-spacing: 0.06em;
 }

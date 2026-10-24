@@ -1,4 +1,3 @@
-
 /* ==========================================================
    ƐDAN — BECOME AN AFFILIATE
    Editorial, image-led, responsive
@@ -746,5 +745,72 @@
 @media (max-width: 560px) {
   .af__closing h2 {
     font-size: clamp(2.6rem, 9vw, 3.5rem);
+  }
+}
+
+
+/* ==========================================
+   BENEFIT 07 — centred under the two columns,
+   number stacked above the title like 01–06.
+   (Overrides the .wc__benefit--wide rules in benefits.css;
+   kept at the end of this file so it loads last.)
+   ========================================== */
+
+.wc .wc__benefits-grid .wc__benefit--wide {
+  grid-column: 1;
+  display: block;
+  grid-template-columns: none;
+  width: 100%;
+  max-width: none;
+  text-align: left;
+}
+
+.wc .wc__benefits-grid .wc__benefit--wide .wc__num {
+  display: block;
+  position: static;
+  margin: 0 0 1rem;
+}
+
+.wc .wc__benefits-grid .wc__benefit--wide .wc__benefit-wide-content {
+  margin: 0;
+  padding: 0;
+  max-width: none;
+}
+
+.wc .wc__benefits-grid .wc__benefit--wide p {
+  margin-inline: auto;
+}
+.wc .wc__benefits-grid .wc__benefit--wide .wc__benefit-wide-content p {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Single-column layouts: keep 07 aligned like the rest */
+@media (max-width: 720px) {
+  .wc .wc__benefits-grid .wc__benefit--wide {
+    justify-self: stretch;
+    width: 100%;
+    max-width: none;
+    text-align: left;
+  }
+
+  .wc .wc__benefits-grid .wc__benefit--wide p {
+    margin-inline: 0;
+  }
+}
+@media (max-width: 720px) {
+  .wc .wc__inner {
+    width: 100%;
+    max-width: none;
+    padding-inline: 1.25rem;
+  }
+
+  .wc .wc__benefits,
+  .wc .wc__benefits-grid,
+  .wc .wc__closing {
+    padding-inline: 0;
+    margin-inline: 0;
   }
 }
